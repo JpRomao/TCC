@@ -29,4 +29,8 @@
             </tbody>
         </table>
     </div>
+    <a href="<?php echo INCLUDE_PATH_ROOT; ?>">
+        <img src="<?php echo INCLUDE_PATH_VIEWS.'assets/icons/back.png'; ?>" alt="Voltar"/>
+            Voltar
+    </a>
 </main>

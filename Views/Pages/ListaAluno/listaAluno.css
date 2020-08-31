@@ -4,6 +4,7 @@
 
 table {
     width: 100%;
+}
 
 table, th, td {
     margin: 0;
@@ -26,4 +27,12 @@ th {
 td {
     line-height: 1.2rem;
     font-size: 1.8rem;
+}
+
+#main-div main a {
+    color: var(--color-title-in-primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-left: 1.2rem;
 }
