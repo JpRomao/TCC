@@ -4,15 +4,16 @@
             <div class="labels">
                 <label for="materia">Matéria: </label>
                 <label for="ano">Ano: </label>
+                <label for="quantidade">Quantidade: </label>
             </div>
             <div class="campos">
                 <select name="materia" id="materia">
                     <option value="" selected="selected" hidden="hidden">&lt;Selecione a matéria do livro&gt;</option>
-                    <?php
-
-                    ?>
                 </select>
-                <input id="ano" name="ano"/>
+                <select name="ano" id="ano">
+                    <option value="" selected="selected" hidden="hidden">&lt;Selecione o ano do livro&gt;</option>
+                </select>
+                <input type="number" id="quantidade" name="quantidade" placeholder="Quantidade de livros..."/>
             </div>
         </div>
         <button type="submit" class="btn">Registrar</button>

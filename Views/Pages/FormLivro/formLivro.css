@@ -52,8 +52,8 @@
     margin-left: 7rem;
 }
 
-#main-div #form .form-info .labels label:first-child,
-#main-div #form .form-info .campos select:first-child {
+#main-div #form .form-info .labels label,
+#main-div #form .form-info .campos select {
     margin-bottom: 1.2rem;
 }
 
@@ -86,7 +86,7 @@
     border-radius: 0.5rem;
     font: 700 2rem Archivo;
     text-decoration: none;
-    margin-top: 1.4rem;
+    margin-top: 0.8rem;
 
     overflow: hidden;
     color: var(--color-text-in-primary);
