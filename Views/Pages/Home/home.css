@@ -1,6 +1,6 @@
 .logo-container a img {
-    width: 90%;
-    height: 11rem;
+    width: 80%;
+    height: 100%;
 }
 
 @media (min-width: 700px) {
