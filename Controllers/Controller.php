@@ -3,7 +3,6 @@
 
     abstract class Controller{
         private $view;
-        private $model;
 
         abstract function execute();
     }
