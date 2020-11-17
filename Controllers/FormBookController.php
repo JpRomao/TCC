@@ -1,7 +1,7 @@
 <?php
     namespace Controllers;
 
-    class FormLivroController extends Controller{
+    class FormBookController extends Controller{
         public function __construct(){
             $this->view = new \Views\View('FormLivro/formBook');
         }

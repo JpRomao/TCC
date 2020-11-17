@@ -8,7 +8,7 @@
             </thead>
             <tbody>
                 <?php
-                    include_once("./conexao.php");
+                    include_once("./connection.php");
                     $sql = "SELECT alunos.prontuario, alunos.nome, alunos.ano FROM alunos";
 
                     foreach($pdo->query($sql) as $row){

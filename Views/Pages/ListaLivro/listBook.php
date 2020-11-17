@@ -10,7 +10,7 @@
             </thead>
             <tbody>
                 <?php
-                    include_once("./conexao.php");
+                    include_once("./connection.php");
                     $sql = "SELECT livros.materia, livros.ano, livros.despachado, livros.estoque FROM livros";
 
                     foreach($pdo->query($sql) as $row){

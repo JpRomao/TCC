@@ -6,7 +6,6 @@
                 <label for="sobrenome">Sobrenome: </label>
                 <label for="ano">Ano: </label>
                 <label for="prontuario">Prontuário: </label>
-                <label for="senha">Senha: </label>
             </div>
             <div class="campos">
                 <input type="text" name="nome" id="nome" required="required"/>
@@ -22,7 +21,6 @@
                     ?>
                 </select>
                 <input type="text" name="prontuario" id="prontuario" required="required"/>
-                <input type="password" name="senha" id="senha" required="required"/>
             </div>
         </div>
         <button type="submit" class="btn">Registrar</button>

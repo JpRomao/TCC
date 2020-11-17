@@ -1,7 +1,7 @@
 <?php
     namespace Controllers;
 
-    class ListaAlunoController extends Controller{
+    class ListStudentController extends Controller{
         public function __construct(){
             $this->view = new \Views\View('ListaAluno/listStudent');
         }

@@ -7,7 +7,8 @@
 
             $url = ucfirst($url);
             $url .= "Controller";
-            if(file_exists('Controllers/'.$url.'.php')){
+
+            if(file_exists('./Controllers/'.$url.'.php')){
                 $className = 'Controllers\\'.$url;
                 $controller = new $className;
                 $controller->execute();

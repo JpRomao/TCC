@@ -30,7 +30,7 @@
             <div id='main-div-content' class='container'>
                 <header id="header">
                     <div class="logo-container">
-                        <a href="<?php echo INCLUDE_PATH_ROOT ?>"><img src="<?php echo INCLUDE_PATH_VIEWS.'assets/img/logo.png' ?>" alt="Logo IF Books"/></a>
+                        <a href="<?php echo INCLUDE_PATH_ROOT ?>"><img src="<?php echo INCLUDE_PATH_VIEWS.'assets/img/logo.svg' ?>" alt="Logo IF Books"/></a>
                     
                         <?php
                             if(isset($array['html']) && !empty($array['html'])){

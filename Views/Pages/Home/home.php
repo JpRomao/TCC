@@ -6,8 +6,8 @@
                 <img src="<?php echo INCLUDE_PATH_VIEWS.'assets/icons/alunosIcon.svg'; ?>" alt="Alunos ícone"/>
             </a>
             <div class="dropdown-content-alunos">
-                <a href="<?php echo INCLUDE_PATH_ROOT.'formAluno'; ?>">Cadastrar Alunos</a>
-                <a href="<?php echo INCLUDE_PATH_ROOT.'listaAluno'; ?>">Listagem Alunos</a>
+                <a href="<?php echo INCLUDE_PATH_ROOT.'formStudent'; ?>">Cadastrar Alunos</a>
+                <a href="<?php echo INCLUDE_PATH_ROOT.'listStudent'; ?>">Listagem Alunos</a>
             </div>
         </div>
         <div class="dropdown-livros">
@@ -16,9 +16,8 @@
                 <img src="<?php echo INCLUDE_PATH_VIEWS.'assets/icons/livrosIcon.svg'; ?>" alt="Livros ícone"/>
             </a>
             <div class="dropdown-content-livros">
-                <a href="<?php echo INCLUDE_PATH_ROOT.'formLivro'; ?>">Cadastrar Livros</a>
-                <a href="<?php echo INCLUDE_PATH_ROOT.'listaLivro'; ?>">Listagem Livros</a>
-                <a href="<?php echo INCLUDE_PATH_ROOT.'admin'; ?>">RSRS</a>
+                <a href="<?php echo INCLUDE_PATH_ROOT.'formBook'; ?>">Cadastrar Livros</a>
+                <a href="<?php echo INCLUDE_PATH_ROOT.'listBook'; ?>">Listagem Livros</a>
             </div>
         </div>
     </div>
