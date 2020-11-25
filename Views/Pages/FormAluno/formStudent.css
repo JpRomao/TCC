@@ -96,6 +96,10 @@
     background: #156B15;
 }
 
+#main-div #status {
+    justify-self: center;
+}
+
 @media (min-width: 700px) {
     #main-div #form {
         margin: 1.5rem 25%;

@@ -23,10 +23,12 @@
                 <input type="text" name="prontuario" id="prontuario" required="required"/>
             </div>
         </div>
-        <button type="submit" class="btn">Registrar</button>
+        <button type="submit" onClick="registraAluno()" class="btn">Registrar</button>
     </div>
+    <div id="status"></div>
     <a href="<?php echo INCLUDE_PATH_ROOT; ?>">
         <img src="<?php echo INCLUDE_PATH_VIEWS.'assets/icons/back.svg'; ?>" alt="Voltar"/>
             Voltar
     </a>
 </main>
+<script src="<?php echo INCLUDE_PATH_VIEWS.'assets/js/formStudent.js'; ?>"></script>
