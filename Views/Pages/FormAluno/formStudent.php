@@ -23,7 +23,7 @@
                 <input type="text" name="prontuario" id="prontuario" required="required"/>
             </div>
         </div>
-        <button type="submit" onClick="registraAluno()" class="btn">Registrar</button>
+        <button type="submit" id="action" class="btn">Registrar</button>
     </div>
     <div id="status"></div>
     <a href="<?php echo INCLUDE_PATH_ROOT; ?>">

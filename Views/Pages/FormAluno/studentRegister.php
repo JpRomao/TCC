@@ -11,7 +11,9 @@
         $sql = $pdo->prepare("INSERT INTO alunos (prontuario, nome, ano) VALUES (?,?,?)");
         $sql->execute($aluno);
         echo json_encode(1);
+        die();
     }catch(PDOException $e){
-        echo json_encode("Erro ao inserir aluno: ".$e->getMessage());
+        echo json_encode("Erro ao inserir.\r\nAluno já cadastrado.");
+        die();
     }
 ?>

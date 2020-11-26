@@ -10,19 +10,19 @@
 
         <link type="text/css" rel="stylesheet" href="<?php echo INCLUDE_PATH_VIEWS."/assets/styles/global.css" ?>"/>
         <link type="text/css" rel="stylesheet" href="<?php echo INCLUDE_PATH_VIEWS."/assets/styles/logo.css" ?>"/>
-
         <?php
             if(isset($array['pageCss'])){
                 foreach($array['pageCss'] as $index => $value){
-        ?>
+                    ?>
                     <link type="text/css" rel="stylesheet" href="<?php echo $value.'.css' ?>"/> 
         <?php
                 } //fim foreach
             } //fim if
-        ?>
+            ?>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins&display=swap"/>
-        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins&display=swap"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 <body>
     <div id='root'>
