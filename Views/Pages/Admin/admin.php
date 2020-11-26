@@ -5,6 +5,7 @@
         die();
     }
 ?>
+    <br/><br/>
 <main>
     <div id="menu" class="buttons-container">
         <div class="dropdown-livros">
@@ -18,6 +19,7 @@
             </div>
         </div>
     </div>
+    <br/>
     <div id="alunos">
         <table>
             <thead>

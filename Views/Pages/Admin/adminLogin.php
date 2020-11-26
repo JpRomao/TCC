@@ -1,5 +1,6 @@
 <?php
     if(isset($_SESSION['admin'])){
+        header("Location: ./admin.php");
         die();
     }
 ?>
@@ -23,7 +24,8 @@
                         <br/>
                     <div class="form">
                         <img src="../../assets/img/key.svg" alt="Chave"/>
-                        <form action="adminLoginConfirm.php" class="form-login">
+
+                        <form action="adminLoginConfirm.php" method="post" class="form-login">
                             <div class="input-block">
                                 <label for="login">Login: </label>
                                     <input type="text" maxlength="16" name="login" id="login"/>
