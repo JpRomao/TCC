@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['admin'])){
+        die();
+    }
+?>
+
 <main id="main">
     <div id="form">
         <div class="form-info">

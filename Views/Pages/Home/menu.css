@@ -21,30 +21,24 @@
     transition: background-color 0.2s;
 }
 
-.buttons-container a.alunos,
-.buttons-container a.livros {
-    background: var(--color-primary);
-    font-size: 5.8rem;
-}
-
-.buttons-container a.alunos:hover,
-.buttons-container a.livros:hover {
-    cursor: pointer;
-    background: var(--color-primary-dark);
-}
-
-.buttons-container a:first-child{
-    margin-right: 2rem;
-}
-
 .buttons-container a img {
     margin-left: 0.6rem;
     width: 5.4rem;
 }
 
+.buttons-container a.alunos {
+    background: var(--color-primary);
+    font-size: 5.8rem;
+}
+
+.buttons-container a.alunos:hover {
+    cursor: pointer;
+    background: var(--color-primary-dark);
+}
+
 .buttons-container .dropdown-content-alunos {
     display: none;
-    position:relative;
+    position: relative;
     z-index: 1;
 }
 
@@ -57,25 +51,6 @@
     display: block;
 }
 
-.buttons-container .dropdown-content-livros {
-    display: none;
-    position:relative;
-    z-index: 1;
-}
-
-.buttons-container .dropdown-content-livros a {
-    text-decoration: none;
-    border: 1px solid black;
-    background: var(--color-secondary);
-    width: 22rem;
-    height: 8.5rem;
-    display: block;
-}
-
-.buttons-container .dropdown-content-livros a:first-child {
-    margin-bottom: 1px;
-}
-
 .dropdown-alunos:hover .dropdown-content-alunos {
     margin-top: 0.5px;
     position: absolute;
@@ -83,16 +58,6 @@
   }
 
 .dropdown-alunos .dropdown-content-alunos a:hover {
-    background: var(--color-secondary-dark);
-}
-
-.dropdown-livros:hover .dropdown-content-livros {
-    margin-top: 0.5px;
-    position: absolute;
-    display: block;
-}
-
-.dropdown-livros .dropdown-content-livros a:hover {
     background: var(--color-secondary-dark);
 }
 

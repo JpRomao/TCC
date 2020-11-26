@@ -10,15 +10,5 @@
                 <a href="<?php echo INCLUDE_PATH_ROOT.'listStudent'; ?>">Listagem Alunos</a>
             </div>
         </div>
-        <div class="dropdown-livros">
-            <a class="livros">
-                Livros 
-                <img src="<?php echo INCLUDE_PATH_VIEWS.'assets/icons/livrosIcon.svg'; ?>" alt="Livros ícone"/>
-            </a>
-            <div class="dropdown-content-livros">
-                <a href="<?php echo INCLUDE_PATH_ROOT.'formBook'; ?>">Cadastrar Livros</a>
-                <a href="<?php echo INCLUDE_PATH_ROOT.'listBook'; ?>">Listagem Livros</a>
-            </div>
-        </div>
     </div>
 </main>
