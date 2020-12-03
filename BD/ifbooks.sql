@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Nov-2020 às 02:16
+-- Tempo de geração: 04-Dez-2020 às 00:42
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.11
 
@@ -24,6 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `administradores`
+--
+
+CREATE TABLE `administradores` (
+  `id` int(11) NOT NULL,
+  `login` varchar(50) COLLATE utf8_swedish_ci NOT NULL,
+  `senha` varchar(35) COLLATE utf8_swedish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+
+--
+-- Extraindo dados da tabela `administradores`
+--
+
+INSERT INTO `administradores` (`id`, `login`, `senha`) VALUES
+(1, 'admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `alunos`
 --
 
@@ -31,16 +50,10 @@ CREATE TABLE `alunos` (
   `id` int(11) NOT NULL,
   `prontuario` char(7) COLLATE utf8_swedish_ci NOT NULL,
   `nome` varchar(80) COLLATE utf8_swedish_ci NOT NULL,
-  `ano` int(1) NOT NULL
+  `ano` int(1) NOT NULL,
+  `codigo` varchar(200) COLLATE utf8_swedish_ci NOT NULL,
+  `turma` set('Informática','Mecânica') COLLATE utf8_swedish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci COMMENT='Tabela dos alunos';
-
---
--- Extraindo dados da tabela `alunos`
---
-
-INSERT INTO `alunos` (`id`, `prontuario`, `nome`, `ano`) VALUES
-(1, '1231', 'AF', 1),
-(2, '1232', 'GG', 2);
 
 -- --------------------------------------------------------
 
@@ -50,30 +63,30 @@ INSERT INTO `alunos` (`id`, `prontuario`, `nome`, `ano`) VALUES
 
 CREATE TABLE `livros` (
   `id` int(11) NOT NULL,
-  `materia` set('Português','Matemática','Química','Biologia','Física','Inglês','Geografia','Sociologia','História','Artes') COLLATE utf8_swedish_ci NOT NULL,
+  `materia` set('Português','Matemática','Química','Biologia','Física','Inglês','Geografia','Sociologia','História','Artes','Filosofia','Espanhol') COLLATE utf8_swedish_ci NOT NULL,
   `ano` enum('1','2','3','4') COLLATE utf8_swedish_ci NOT NULL,
   `despachado` int(11) NOT NULL,
   `estoque` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 
 --
--- Extraindo dados da tabela `livros`
---
-
-INSERT INTO `livros` (`id`, `materia`, `ano`, `despachado`, `estoque`) VALUES
-(1, 'Matemática', '1', 60, 0),
-(2, 'Português', '2', 90, 0),
-(3, 'Geografia', '1', 70, 30);
-
---
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `administradores`
+--
+ALTER TABLE `administradores`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `login` (`login`);
 
 --
 -- Índices para tabela `alunos`
 --
 ALTER TABLE `alunos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `prontuario` (`prontuario`),
+  ADD UNIQUE KEY `codigo` (`codigo`);
 
 --
 -- Índices para tabela `livros`
@@ -86,16 +99,22 @@ ALTER TABLE `livros`
 --
 
 --
+-- AUTO_INCREMENT de tabela `administradores`
+--
+ALTER TABLE `administradores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
