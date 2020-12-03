@@ -9,24 +9,29 @@
             <tbody>
                 <?php
                     include_once("./connection.php");
-                    $sql = "SELECT alunos.prontuario, alunos.nome, alunos.ano FROM alunos";
+                    $sql = "SELECT alunos.prontuario, alunos.nome, alunos.ano, alunos.codigo FROM alunos";
 
                     foreach($pdo->query($sql) as $row){
                 ?>
                         <tr>
                             <td>
                                 <?php
-                                    echo $row['prontuario']      
+                                    echo $row['prontuario'];
                                 ?>
                             </td>
                             <td>
                                 <?php
-                                    echo $row['nome']      
+                                    echo $row['nome'];
                                 ?>
                             </td>
                             <td>
                                 <?php
-                                    echo $row['ano']      
+                                    echo $row['ano'];
+                                ?>
+                            </td>
+                            <td>
+                                <?php
+                                    echo $row['codigo'];
                                 ?>
                             </td>
                         </tr>

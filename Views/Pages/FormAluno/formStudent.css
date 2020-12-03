@@ -12,7 +12,11 @@
     margin-right: 0.6rem;
 }
 
-#main-div #form {   
+#main-div .content {
+    margin-bottom: 3.2rem;
+}
+
+#main-div .content #form {   
     margin: 1.3rem 10%;
     width: 80%;
     border: 1px solid black;
@@ -24,7 +28,7 @@
     background: transparent;
 }
 
-#main-div #form .form-info {
+#main-div .content #form .form-info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -32,7 +36,7 @@
     margin-bottom: 1rem;
 }
 
-#main-div #form .form-info .campos {
+#main-div .content #form .form-info .campos {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -41,7 +45,7 @@
     align-items: left;
 }
 
-#main-div #form .form-info .labels {
+#main-div .content #form .form-info .labels {
     display: flex;
     flex-wrap: wrap;
     height: 20rem;
@@ -53,29 +57,30 @@
     margin-left: 5rem;
 }
 
-#main-div #form .form-info .campos input {
+#main-div .content #form .form-info .campos input {
     font-size: 1.5rem;
 }
 
-#main-div #form .form-info .campos select {
+#main-div .content #form .form-info .campos select {
     font-size: 1.8rem;
 }
 
-#main-div #form .form-info .labels label {
+#main-div .content #form .form-info .labels label {
     font-size: 2rem;
     font-weight: bold;
     height: 2.6rem;
 }
 
-#main-div #form .form-info .campos input, select {
+#main-div .content #form .form-info .campos input, select {
     height: 2.6rem;
     border: 2px solid var(--color-primary-dark);
+    border-radius: 0.5rem;
     color: var(--color-text-in-primary);
     max-width: 24rem;
     width: 80%;
 }
 
-#main-div #form .btn {
+#main-div .content #form .btn {
     border: 1px solid black;
     width: 10rem;
     height: 3rem;
@@ -91,27 +96,31 @@
     background: var(--color-box-base);
 }
 
-#main-div #form .btn:hover {
+#main-div .content #form .btn:hover {
     cursor: pointer;
     background: #156B15;
 }
 
-#main-div #status {
-    justify-self: center;
+#main-div .content #status {
+    margin-top: 3rem;
+    margin-left: 25%;
+    background-color: #FFF;
+    width: 50%;
+    text-align: center;
 }
 
 @media (min-width: 700px) {
-    #main-div #form {
+    #main-div .content #form {
         margin: 1.5rem 25%;
         width: 50%;
     }
 
-    #main-div #form .form-info .labels {
+    #main-div .content #form .form-info .labels {
         margin-right: 0.8rem;
         margin-left: 6.4rem;
         width: 29%;
     }
-    #main-div #form .form-info .campos {
+    #main-div .content #form .form-info .campos {
         width: 71%;
     }
 }

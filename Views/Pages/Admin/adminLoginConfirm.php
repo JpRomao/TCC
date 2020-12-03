@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include_once("../../../adminConnection.php");
+    include_once("../../../connection.php");
 
     if(isset($_POST["action"])){
         $user = array($_POST["login"]);
@@ -11,10 +11,10 @@
         die();
     }
 
-    $sql = $pdo->prepare("SELECT * FROM usuario WHERE user = ?");
+    $sql = $pdo->prepare("SELECT * FROM administradores WHERE login = ?");
     $sql->execute($user);
 
-    if($sql->rowCount() == 1){
+    if($sql->rowCount() === 1){
         $info = $sql->fetch();
 
         if($password === $info['senha']){
@@ -23,6 +23,7 @@
             $_SESSION['user'] = $info['user'];
         }
     }
+
     $adminPage = "http://localhost/TCC/Admin";
     header("Location: ".$adminPage);
     die();
