@@ -5,15 +5,23 @@
                 <div class="labels">
                     <label for="nome">Nome: </label>
                     <label for="sobrenome">Sobrenome: </label>
+                    <label for="turma">Turma: </label>
                     <label for="ano">Ano: </label>
                     <label for="prontuario">Prontuário: </label>
                 </div>
                 <div class="campos">
                     <input type="text" name="nome" id="nome" required="required"/>
                     <input type="text" name="sobrenome" id="sobrenome" required="required"/>
+                    <select name="turma" id="turma" required="required">
+                        <option value="" selected="selected" hidden="hidden">
+                            &lt;Turmo do aluno&gt;
+                        </option>
+                        <option value="Informática">Informática</option>
+                        <option value="Mecânica">Mecânica</option>
+                    </select>
                     <select name="ano" id="ano" required="required">
                         <option value="" selected="selected" hidden="hidden">
-                            &lt;Ano que está cursando&gt;
+                            &lt;Ano que o aluno está cursando&gt;
                         </option>
                         <?php
                             for($i=1;$i<=4;$i++){
