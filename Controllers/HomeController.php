@@ -2,7 +2,7 @@
     namespace Controllers;
     define('HTML','<h2>Entrega e Devolução de Livros</h2>');
 
-    class HomeController extends Controller{
+    class HomeController{
         public function __construct(){
             $this->view = new \Views\View('Home/home');
         }
@@ -14,4 +14,5 @@
                                       'html'=>HTML));
         }
     }
+$controller = new HomeController();
 ?>
