@@ -13,9 +13,8 @@ define('INCLUDE_PATH_VIEWS', 'http://localhost/TCC/Views/');
                 $className = 'Controllers/'.$url;
                 $newClass = 'Controllers\\'.$url;
                 require_once $className.'.php';
-                $controller = new $newClass;
-                var_dump($newClass);
                 echo $newClass;
+                $controller = new $newClass;
                 $controller->execute();
             }
             else{
