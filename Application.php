@@ -11,6 +11,7 @@
             if(file_exists('./Controllers/'.$url.'.php')){
                 $className = 'Controllers\\'.$url;
                 $controller = new $className;
+                echo "ok";
                 $controller->execute();
             }
             else{
