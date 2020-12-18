@@ -6,14 +6,15 @@
         public function __construct(){
             echo "construct";
             include("../Views/View.php");
-            
+            var_dump($view);
         }
 
         public function execute(){
-            $view->render(array('titulo'=>'Home',
-                                     'pageCss'=>(array(INCLUDE_PATH_VIEWS.'Pages/Home/home',
-                                                        INCLUDE_PATH_VIEWS.'Pages/Home/menu')),
-                                      'html'=>HTML));
+            var_dump($view);
+//             $view->render(array('titulo'=>'Home',
+//                                      'pageCss'=>(array(INCLUDE_PATH_VIEWS.'Pages/Home/home',
+//                                                         INCLUDE_PATH_VIEWS.'Pages/Home/menu')),
+//                                       'html'=>HTML));
         }
     }
 $controller = new HomeController();
