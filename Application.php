@@ -9,9 +9,9 @@
             $url .= "Controller";
 
             if(file_exists('./Controllers/'.$url.'.php')){
-                echo $url;
-//                 include_once("./Controllers/$url.php");
-                //$controller->execute();
+                include_once("./Controllers/$url.php");
+                
+                $controller->execute();
             }
             else{
                 die("<h1>Página inexistente!</h1>");
