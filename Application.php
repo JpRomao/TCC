@@ -1,6 +1,6 @@
 <?php
-    define('INCLUDE_PATH_ROOT', 'http://localhost/TCC/');
-    define('INCLUDE_PATH_VIEWS', 'http://localhost/TCC/Views/');
+    define('INCLUDE_PATH_ROOT', __DIR__.'/TCC/');
+    define('INCLUDE_PATH_VIEWS', __DIR__.'/Views/');
     class Application{
         public function execute(){
             $url = isset($_GET['url']) ? explode('/',$_GET['url'])[0] : 'Home';
