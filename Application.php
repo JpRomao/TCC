@@ -18,4 +18,5 @@
             }
         }
     }
+    $application = new Application();
 ?>
