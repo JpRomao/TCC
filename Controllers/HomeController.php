@@ -12,9 +12,9 @@
 
         public function execute(){
 //             $view->render(array('titulo'=>'Home',
-//                                      'pageCss'=>(array(INCLUDE_PATH_VIEWS.'Pages/Home/home',
-//                                                         INCLUDE_PATH_VIEWS.'Pages/Home/menu')),
-//                                       'html'=>HTML));
+//                                      'pageCss'=>(array('https://ifbookst.herokuapp.com/Views/Pages/Home/home',
+//                                                         'https://ifbookst.herokuapp.com/Views/Pages/Home/menu')),
+//                                       'html'=>'<h1>oi</h1>'));
         }
     }
 $controller = new HomeController();
