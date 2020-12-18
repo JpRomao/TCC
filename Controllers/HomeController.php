@@ -4,7 +4,8 @@
 
     class HomeController{
         public function __construct(){
-            $this->view = new \Views\View('Home/home');
+            echo "construct";
+            //$this->view = new \Views\View('Home/home');
         }
 
         public function execute(){
