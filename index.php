@@ -1,6 +1,5 @@
 <?php
     $autoload = function($class){
-        echo $class;
         require($class.'.php');
     };
 
