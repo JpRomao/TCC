@@ -15,6 +15,6 @@
         }
     }
 
-$controller = new HomeController();
+$controller = new HomeController;
     $controller->execute();
 ?>
