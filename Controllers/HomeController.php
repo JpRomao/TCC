@@ -1,7 +1,6 @@
 <?php
     namespace Controllers;
     define('HTML','<h2>Entrega e Devolução de Livros</h2>');
-echo "ok";
 
     class HomeController extends Controller{
         public function __construct(){
@@ -15,4 +14,6 @@ echo "ok";
                                       'html'=>HTML));
         }
     }
+
+    $class = HomeController();
 ?>
