@@ -14,7 +14,4 @@
                                       'html'=>HTML));
         }
     }
-
-$controller = new HomeController;
-    $controller::execute();
 ?>
