@@ -10,7 +10,7 @@
 
             if(file_exists('./Controllers/'.$url.'.php')){
                 include_once("./Controllers/$url.php");
-                $controller->execute();
+                //$controller->execute();
             }
             else{
                 die("<h1>Página inexistente!</h1>");
