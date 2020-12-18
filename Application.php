@@ -9,9 +9,7 @@
             $url .= "Controller";
 
             if(file_exists('./Controllers/'.$url.'.php')){
-                $className = './Controllers/'.$url.'.php';
-                echo "ok";
-                
+                $className = './Controllers/'.$url.'.php';                
                 require_once $className;
 //                 $controller = new $className;
                 $controller->execute();
