@@ -19,4 +19,5 @@
         }
     }
 $view = new View();
+var_dump($view);
 ?>
