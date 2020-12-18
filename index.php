@@ -1,9 +1,9 @@
 <?php
-    function autoloader($className){
-        require_once $className.'.php';
-    }
+    $autoload = function($class){
+        require($class.'.php');
+    };
 
-    spl_autoload_register('autoloader');
+    spl_autoload_register($autoload);
 
     $app = new Application();
     $app->execute();
