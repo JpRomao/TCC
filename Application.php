@@ -1,4 +1,6 @@
 <?php
+define('INCLUDE_PATH_ROOT', 'http://localhost/TCC/');
+define('INCLUDE_PATH_VIEWS', 'http://localhost/TCC/Views/');
     class Application{
         public function execute(){
             echo 'Chega em Application<br>';
@@ -10,8 +12,7 @@
             if(file_exists('Controllers/'.$url.'.php')){
                 $className = 'Controllers/'.$url;
                 include_once $className.'.php';
-                $newClass = 'Controllers\\'.$url;
-                $controller = new $newClass;
+                $controller = new $className;
                 $controller->execute();
             }
             else{
