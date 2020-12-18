@@ -9,7 +9,8 @@
             $url .= "Controller";
 
             if(file_exists('./Controllers/'.$url.'.php')){
-                include_once("./Controllers/$url.php");
+                echo "oi app";
+//                 include_once("./Controllers/$url.php");
                 //$controller->execute();
             }
             else{
