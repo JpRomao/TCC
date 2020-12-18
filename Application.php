@@ -10,9 +10,8 @@
 
             if(file_exists('./Controllers/'.$url.'.php')){
                 $className = './Controllers/'.$url.'.php';                
-                require_once($className);
-//                 $controller = new $className;
-//                 $controller->execute();
+                $controller = new $className;
+                $controller->execute();
             }
             else{
                 die("<h1>Página inexistente!</h1>");
