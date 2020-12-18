@@ -8,8 +8,6 @@
             if(file_exists("../Views/View.php"){
                 echo "oieeee";
             }
-            include("");
-
         }
 
         public function execute(){
