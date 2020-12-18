@@ -9,7 +9,7 @@
             $url .= "Controller";
 
             if(file_exists('./Controllers/'.$url.'.php')){
-                $className = '\Controllers\\'.$url;
+                $className = '\\Controllers\\'.$url;
                 $controller = new $className;
                 $controller->execute();
             }
