@@ -1,11 +1,12 @@
 <?php
-    function autoloader($className)
-    {
-        require_once $className.'.php';
-    }
+    echo "Hello World";
+//     function autoloader($className)
+//     {
+//         require_once $className.'.php';
+//     }
 
-    spl_autoload_register('autoloader');
+//     spl_autoload_register('autoloader');
 
-    $app = new Application();
-    $app->execute();
+//     $app = new Application();
+//     $app->execute();
 ?>
