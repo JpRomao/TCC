@@ -14,8 +14,4 @@
                                       'html'=>HTML));
         }
     }
-
-    $class = HomeController();
-var_dump($class);
-$class->execute();
 ?>
