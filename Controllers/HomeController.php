@@ -5,7 +5,7 @@
     class HomeController{        
         public function __construct(){
             echo "construct";
-            if(file_exists("../Views/View.php"){
+            if(file_exists("../Views/View.php")){
                 echo "oieeee";
             }
         }
