@@ -1,6 +1,6 @@
 <?php
-    $autoload = function($class){
-        require($class.'.php');
+    $autoload = function(){
+        require_once('Application.php');
     };
 
     spl_autoload_register($autoload);
