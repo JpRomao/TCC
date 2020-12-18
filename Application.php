@@ -10,11 +10,11 @@ define('INCLUDE_PATH_VIEWS', 'http://localhost/TCC/Views/');
             $url .= "Controller";
             
             if(file_exists('Controllers/'.$url.'.php')){
-                echo "oi";
                 $className = 'Controllers/'.$url;
+                $newClass = 'Controllers\\'.$url;
                 require_once $className.'.php';
-                $controller = new $className;
-                var_dump($controller);
+                $controller = new $newClass;
+                var_dump($newClass);
                 $controller->execute();
             }
             else{
