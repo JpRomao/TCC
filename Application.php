@@ -11,7 +11,7 @@ define('INCLUDE_PATH_VIEWS', 'http://localhost/TCC/Views/');
             
             if(file_exists('Controllers/'.$url.'.php')){
                 $className = 'Controllers/'.$url;
-                include_once $className.'.php';
+                require_once $className.'.php';
                 $controller = new $className;
                 $controller->execute();
             }
