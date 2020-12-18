@@ -5,12 +5,14 @@
     class HomeController{        
         public function __construct(){
             echo "construct";
-            include("../Views/View.php");
+            if(file_exists("../Views/View.php"){
+                echo "oieeee";
+            }
+            include("");
 
         }
 
         public function execute(){
-            echo "<br>oi";
 //             $view->render(array('titulo'=>'Home',
 //                                      'pageCss'=>(array(INCLUDE_PATH_VIEWS.'Pages/Home/home',
 //                                                         INCLUDE_PATH_VIEWS.'Pages/Home/menu')),
