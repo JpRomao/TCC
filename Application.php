@@ -9,8 +9,9 @@
             
             if(file_exists('Controllers/'.$url.'.php')){
                 $className = 'Controllers/'.$url;
-                require_once $className.'.php';
-                $controller = new $className;
+                include_once $className.'.php';
+                $newClass = 'Controllers\\'.$url;
+                $controller = new $newClass;
                 $controller->execute();
             }
             else{
