@@ -1,9 +1,4 @@
 <?php
-    $autoload = function(){
-        require_once('Application.php');
-    };
-
-    spl_autoload_register($autoload);
-
+    require_once("Application.php");
     $application->execute();
 ?>
