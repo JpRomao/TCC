@@ -1,3 +1,3 @@
 <?php
-    echo "oi";
+    include_once("Application.php");
 ?>
