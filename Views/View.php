@@ -18,4 +18,5 @@
             require('Pages/templates/'.$this->footer.'.php'); //footer
         }
     }
+$view = new View();
 ?>
