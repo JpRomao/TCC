@@ -24,7 +24,7 @@
         }
     }
 
-    $adminPage = "http://localhost/TCCheroku/Pages/Admin/admin.php";
+    $adminPage = "https://ifbookst.herokuapp.com/Pages/Admin/admin.php";
     header("Location: ".$adminPage);
     die();
 ?>

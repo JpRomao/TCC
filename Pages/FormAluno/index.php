@@ -54,12 +54,12 @@
         </div>
         <div id="status"></div>
     </div>
-    <a href="<?php echo "/TCCheroku"; ?>">
-        <img src="<?php echo '/TCCheroku/assets/icons/back.svg'; ?>" alt="Voltar"/>
+    <a href="<?php echo "https://ifbookst.herokuapp.com"; ?>">
+        <img src="<?php echo 'https://ifbookst.herokuapp.com/assets/icons/back.svg'; ?>" alt="Voltar"/>
             Voltar
     </a>
 </main>
-<script src="<?php echo '/TCCheroku/assets/js/formStudent.js'; ?>"></script>
+<script src="<?php echo 'https://ifbookst.herokuapp.com/assets/js/formStudent.js'; ?>"></script>
 <?php
     include("../templates/footer.php");
 ?>

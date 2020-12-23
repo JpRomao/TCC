@@ -42,7 +42,7 @@
 
         echo "
             <img
-                src='http://localhost/TCCheroku/assets/img/barcodes/$pasta/$prontuario-00$ano.gif'
+                src='https://ifbookst.herokuapp.com/assets/img/barcodes/$pasta/$prontuario-00$ano.gif'
                 alt='Codigo aluno: $nome - $prontuario'
             />
         ";

@@ -48,8 +48,8 @@
             </tbody>
         </table>
     </div>
-    <a href="<?php echo "/TCCheroku"; ?>">
-        <img src="<?php echo '/TCCheroku/assets/icons/back.svg'; ?>" alt="Voltar"/>
+    <a href="<?php echo "https://ifbookst.herokuapp.com/"; ?>">
+        <img src="<?php echo 'https://ifbookst.herokuapp.com/assets/icons/back.svg'; ?>" alt="Voltar"/>
             Voltar
     </a>
 </main>

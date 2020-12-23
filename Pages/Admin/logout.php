@@ -5,6 +5,6 @@
 
   session_destroy();
 
-  header("Location: /TCCheroku");
+  header("Location: https://ifbookst.herokuapp.com");
   die();
 ?>
