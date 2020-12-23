@@ -5,6 +5,6 @@
 
   session_destroy();
 
-  header("Location: https://ifbookst.herokuapp.com");
+  header("Location: https://ifbookstcc.000webhostapp.com");
   die();
 ?>

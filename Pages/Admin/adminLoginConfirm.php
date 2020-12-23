@@ -24,7 +24,7 @@
         }
     }
 
-    $adminPage = "https://ifbookst.herokuapp.com/Pages/Admin/admin.php";
+    $adminPage = "https://ifbookstcc.000webhostapp.com/Pages/Admin/admin.php";
     header("Location: ".$adminPage);
     die();
 ?>
