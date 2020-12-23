@@ -6,6 +6,6 @@ php_value display_errors 1
 RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L]
+RewriteRule ^(.*)$ /index.php?url=$1 [QSA,L]
 
 Options -Indexes
