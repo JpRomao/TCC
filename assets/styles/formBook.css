@@ -1,0 +1,117 @@
+#main-div main a {
+    color: var(--color-title-in-primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-left: 1.2rem;
+}
+
+#main-div main a img {
+    height: 2rem;
+    width: 3rem;
+    margin-right: 0.6rem;
+}
+
+#main-div #form {   
+    margin: 1.3rem 10%;
+    width: 80%;
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+    background: transparent;
+}
+
+#main-div #form .form-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+#main-div #form .form-info .campos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 7rem;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+#main-div #form .form-info .labels {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: auto;
+    max-width: 20%;
+    justify-content: flex-end;
+    align-items: right;
+    margin-right: 1.4rem;
+    margin-left: 7rem;
+}
+
+#main-div #form .form-info .labels label,
+#main-div #form .form-info .campos select {
+    margin-bottom: 1.2rem;
+}
+
+#main-div #form .form-info .campos input {
+    font-size: 1.5rem;
+}
+
+#main-div #form .form-info .campos select {
+    font-size: 1.8rem;
+}
+
+#main-div #form .form-info .labels label {
+    font-size: 2rem;
+    font-weight: bold;
+    height: 2.6rem;
+}
+
+#main-div #form .form-info .campos input, select {
+    height: 2.6rem;
+    border: 2px solid var(--color-primary-dark);
+    color: var(--color-text-in-primary);
+    max-width: 24rem;
+    width: 80%;
+}
+
+#main-div #form .btn {
+    border: 1px solid black;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    font: 700 2rem Archivo;
+    text-decoration: none;
+    margin-top: 0.8rem;
+
+    overflow: hidden;
+    color: var(--color-text-in-primary);
+
+    transition: background-color 0.2s;
+    background: var(--color-box-base);
+}
+
+#main-div #form .btn:hover {
+    cursor: pointer;
+    background: #156B15;
+}
+
+@media (min-width: 700px) {
+    #main-div #form {
+        margin: 1.5rem 25%;
+        width: 50%;
+    }
+
+    #main-div #form .form-info .labels {
+        margin-right: 0.8rem;
+        margin-left: 6.4rem;
+        width: 29%;
+    }
+    #main-div #form .form-info .campos {
+        width: 71%;
+    }
+}
