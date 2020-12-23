@@ -54,7 +54,7 @@
         </div>
         <div id="status"></div>
     </div>
-    <a href="<?php echo "https://ifbookstcc.000webhostapp.com"; ?>">
+    <a href="<?php echo "https://ifbookstcc.000webhostapp.com/"; ?>">
         <img src="<?php echo 'https://ifbookstcc.000webhostapp.com/assets/icons/back.svg'; ?>" alt="Voltar"/>
             Voltar
     </a>

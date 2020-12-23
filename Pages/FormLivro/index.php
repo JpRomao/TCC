@@ -23,7 +23,7 @@
                 <select name="materia" id="materia">
                     <option value="" selected="selected" hidden="hidden">&lt;Selecione a matéria do livro&gt;</option>
                     <option value="Artes">Artes</option>
-                    <!-- <option value="Educação Física">Educação Física</option> -->
+                    <option value="Educação Física">Educação Física</option>
                     <option value="Física">Física</option>
                     <option value="Química">Química</option>
                     <option value="Matemática">Matemática</option>
@@ -50,7 +50,7 @@
         <button type="submit" id="action" class="btn">Registrar</button>
     </div>
     <div id="status"></div>
-    <a href="<?php echo "https://ifbookstcc.000webhostapp.com"; ?>">
+    <a href="<?php echo "https://ifbookstcc.000webhostapp.com/"; ?>">
         <img src="<?php echo 'https://ifbookstcc.000webhostapp.com/assets/icons/back.svg'; ?>" alt="Voltar"/>
             Voltar
     </a>

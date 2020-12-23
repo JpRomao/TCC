@@ -7,7 +7,7 @@ $(function(){
         const turma = $("select[name='turma']").val();
 
         $.ajax({
-           url: "http://localhost/TCCheroku/Pages/FormAluno/studentRegister.php",
+           url: "https://ifbookstcc.000webhostapp.com/Pages/FormAluno/studentRegister.php",
            type: "post",
            data: {
                 nome,

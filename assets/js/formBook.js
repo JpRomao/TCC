@@ -5,7 +5,7 @@ $(function(){
       const quantidade = $("input[name='quantidade']").val();
 
       $.ajax({
-         url: "http://localhost/TCCheroku/Pages/FormLivro/bookRegister.php",
+         url: "https://ifbookstcc.000webhostapp.com/Pages/FormLivro/bookRegister.php",
          type: "post",
          data: {
               materia,

@@ -48,8 +48,8 @@
             </tbody>
         </table>
     </div>
-    <a href="<?php echo "hhttps://ifbookstcc.000webhostapp.com/"; ?>">
-        <img src="<?php echo 'hhttps://ifbookstcc.000webhostapp.com/assets/icons/back.svg'; ?>" alt="Voltar"/>
+    <a href="<?php echo "https://ifbookstcc.000webhostapp.com/"; ?>">
+        <img src="<?php echo 'https://ifbookstcc.000webhostapp.com/assets/icons/back.svg'; ?>" alt="Voltar"/>
             Voltar
     </a>
 </main>
