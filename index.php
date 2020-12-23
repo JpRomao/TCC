@@ -13,8 +13,8 @@
                 <img src="<?php echo 'https://ifbookst.herokuapp.com/assets/icons/alunosIcon.svg'; ?>" alt="Alunos ícone"/>
             </a>
             <div class="dropdown-content-alunos">
-                <a href="<?php echo 'https://ifbookst.herokuapp.com/Pages/FormAluno'; ?>">Cadastrar Alunos</a>
-                <a href="<?php echo 'https://ifbookst.herokuapp.com/Pages/ListaAluno'; ?>">Listagem Alunos</a>
+                <a href="<?php echo 'https://ifbookst.herokuapp.com/Pages/FormAluno/'; ?>">Cadastrar Alunos</a>
+                <a href="<?php echo 'https://ifbookst.herokuapp.com/Pages/ListaAluno/'; ?>">Listagem Alunos</a>
             </div>
         </div>
     </div>
