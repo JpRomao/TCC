@@ -55,8 +55,8 @@
             </tbody>
         </table>
     </div>
-    <a href="<?php echo 'https://ifbookstcc.000webhostapp.com/Pages/Admin/admin.php'; ?>">
-        <img src="<?php echo 'https://ifbookstcc.000webhostapp.com/assets/icons/back.svg'; ?>" alt="Voltar"/>
+    <a href="<?php echo 'http://localhost/TCC/Pages/Admin/admin.php'; ?>">
+        <img src="<?php echo 'http://localhost/TCC/assets/icons/back.svg'; ?>" alt="Voltar"/>
             Voltar
     </a>
 </main>

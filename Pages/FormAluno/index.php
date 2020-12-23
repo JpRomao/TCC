@@ -54,12 +54,12 @@
         </div>
         <div id="status"></div>
     </div>
-    <a href="<?php echo "https://ifbookstcc.000webhostapp.com/"; ?>">
-        <img src="<?php echo 'https://ifbookstcc.000webhostapp.com/assets/icons/back.svg'; ?>" alt="Voltar"/>
+    <a href="<?php echo "http://localhost/TCC/"; ?>">
+        <img src="<?php echo 'http://localhost/TCC/assets/icons/back.svg'; ?>" alt="Voltar"/>
             Voltar
     </a>
 </main>
-<script src="<?php echo 'https://ifbookstcc.000webhostapp.com/assets/js/formStudent.js'; ?>"></script>
+<script src="<?php echo 'http://localhost/TCC/assets/js/formStudent.js'; ?>"></script>
 <?php
     include("../templates/footer.php");
 ?>

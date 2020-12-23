@@ -10,11 +10,11 @@
         <div class="dropdown-alunos">
             <a class="alunos">
                 Alunos
-                <img src="<?php echo 'https://ifbookstcc.000webhostapp.com/assets/icons/alunosIcon.svg'; ?>" alt="Alunos ícone"/>
+                <img src="<?php echo 'http://localhost/TCC/assets/icons/alunosIcon.svg'; ?>" alt="Alunos ícone"/>
             </a>
             <div class="dropdown-content-alunos">
-                <a href="<?php echo 'https://ifbookstcc.000webhostapp.com/Pages/FormAluno/'; ?>">Cadastrar Alunos</a>
-                <a href="<?php echo 'https://ifbookstcc.000webhostapp.com/Pages/ListaAluno/'; ?>">Listagem Alunos</a>
+                <a href="<?php echo 'http://localhost/TCC/Pages/FormAluno/'; ?>">Cadastrar Alunos</a>
+                <a href="<?php echo 'http://localhost/TCC/Pages/ListaAluno/'; ?>">Listagem Alunos</a>
             </div>
         </div>
     </div>

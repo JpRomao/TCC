@@ -19,11 +19,11 @@
         <div class="dropdown-livros">
             <a class="livros">
                 Livros 
-                <img src="<?php echo 'https://ifbookstcc.000webhostapp.com/assets/icons/livrosIcon.svg'; ?>" alt="Livros ícone"/>
+                <img src="<?php echo 'http://localhost/TCC/assets/icons/livrosIcon.svg'; ?>" alt="Livros ícone"/>
             </a>
             <div class="dropdown-content-livros">
-                <a href="<?php echo 'https://ifbookstcc.000webhostapp.com/Pages/FormLivro'; ?>">Cadastrar Livros</a>
-                <a href="<?php echo 'https://ifbookstcc.000webhostapp.com/Pages/ListaLivro'; ?>">Listagem Livros</a>
+                <a href="<?php echo 'http://localhost/TCC/Pages/FormLivro'; ?>">Cadastrar Livros</a>
+                <a href="<?php echo 'http://localhost/TCC/Pages/ListaLivro'; ?>">Listagem Livros</a>
             </div>
         </div>
     </div>

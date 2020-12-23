@@ -42,7 +42,7 @@
 
         echo "
             <img
-                src='https://ifbookstcc.000webhostapp.com/assets/img/barcodes/$pasta/$prontuario-00$ano.gif'
+                src='http://localhost/TCC/assets/img/barcodes/$pasta/$prontuario-00$ano.gif'
                 alt='Codigo aluno: $nome - $prontuario'
             />
         ";
