@@ -24,8 +24,8 @@ $(function(){
                    $("#status").html(response);
                }
            },
-           error: (response) => {
-               $("#status").html(response);
+           error: () => {
+               $("#status").html("Não foi possível se conectar ao servidor.");
            }
         });
     });
