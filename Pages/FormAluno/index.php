@@ -1,4 +1,11 @@
 <?php
+    session_start();
+
+    if(!isset($_SESSION['admin']) && $_SESSION["admin"]){
+        echo "<h1>Página movida permanentemente";
+        die();
+    }
+
     $array["pageCss"] = ["formStudent"];
     $array["titulo"] = "Formulário aluno";
 
@@ -54,12 +61,12 @@
         </div>
         <div id="status"></div>
     </div>
-    <a href="<?php echo "https://ifbookst.herokuapp.com"; ?>">
-        <img src="<?php echo 'https://ifbookst.herokuapp.com/assets/icons/back.svg'; ?>" alt="Voltar"/>
+    <a href="http://localhost/TCC/">
+        <img src="http://localhost/TCC/assets/icons/back.svg" alt="Voltar"/>
             Voltar
     </a>
 </main>
-<script src="<?php echo 'https://ifbookst.herokuapp.com/assets/js/formStudent.js'; ?>"></script>
+<script src="http://localhost/TCC/assets/js/formStudent.js"></script>
 <?php
     include("../templates/footer.php");
 ?>

@@ -1,4 +1,11 @@
 <?php
+    session_start();
+
+    if(!isset($_SESSION['admin']) && $_SESSION["admin"]){
+        echo "<h1>Página movida permanentemente</h1>";
+        die();
+    }
+
     include_once('../../connection.php');
 
     $materia = $_POST["materia"];
@@ -20,8 +27,10 @@
         }
 
         if($i>0){
-            echo "Livro já inserido.";
-            die();
+            $data = [$quantidade, $materia, $ano];
+
+            $sql = $pdo->prepare("UPDATE livros SET estoque = (estoque - ?) WHERE materia = ? AND ano = ?");
+            $sql->execute($data);
         }
         else{
             $sql = $pdo->prepare("INSERT INTO livros (materia, ano, estoque) VALUES (?,?,?)");

@@ -1,0 +1,57 @@
+.table {
+  display: block;
+  position: relative;
+  margin-bottom: 9rem;
+}
+
+td {
+  padding: 0.8rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8.2rem;
+  margin-top: 1.2rem;
+  padding: 0.8rem;
+
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+
+  background: var(--color-primary);
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: var(--color-primary-dark);
+}
+
+.next-btn {
+  position: absolute;
+  right: 2px;
+}
+
+.previous-btn {
+  position: absolute;
+  left: 2px;
+}
+
+.btn-action {
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+  width: 40px;
+  height: 30px;
+  padding: 0.3rem;
+  background-color: transparent;
+}
+
+.btn-action img {
+  width: 100%;
+  height: 100%;
+}

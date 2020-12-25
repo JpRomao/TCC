@@ -5,6 +5,6 @@
 
   session_destroy();
 
-  header("Location: https://ifbookst.herokuapp.com");
+  header("Location: http://localhost/TCC/");
   die();
 ?>

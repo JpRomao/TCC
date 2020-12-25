@@ -3,29 +3,35 @@ $(function(){
         const nome = $("input[name='nome']").val();
         const sobrenome = $("input[name='sobrenome']").val();
         const ano = $("select[name='ano']").val();
-        const prontuario = $("input[name='prontuario']").val();
+        const prontuario = `${$("input[name='prontuario']").val()}`;
         const turma = $("select[name='turma']").val();
+        const continuar = `${$("input[name='continuar']").prop('checked')}`;
+
+        if(prontuario.length !== 7){
+            return $("#status").html("Verifique seu prontuário.");
+        }
 
         $.ajax({
-           url: "https://ifbookst.herokuapp.com/TCCheroku/Pages/FormAluno/studentRegister.php",
+           url: "https://ifbookstcc.000webhostapp.com/Pages/FormAluno/studentRegister.php",
            type: "post",
            data: {
                 nome,
                 sobrenome,
                 ano,
                 prontuario,
-                turma
+                turma,
+                continuar
            },
            success: response => {
                if(response === 1){
-                   $("#status").html("Aluno cadastrado com sucesso.");
+                   return $("#status").html("Aluno cadastrado com sucesso.");
                }
                else{
-                   $("#status").html(response);
+                   return $("#status").html(response);
                }
            },
            error: () => {
-               $("#status").html("Não foi possível se conectar ao servidor.");
+               return $("#status").html("Não foi possível conectar ao servidor.");
            }
         });
     });

@@ -1,6 +1,11 @@
 <?php
     session_start();
 
+    if(!isset($_SESSION['admin']) && $_SESSION["admin"]){
+        echo "<h1>Página movida permanentemente</h1>";
+        die();
+    }
+
     include_once("../../connection.php");
 
     if(isset($_POST["action"])){
@@ -24,7 +29,7 @@
         }
     }
 
-    $adminPage = "https://ifbookst.herokuapp.com/Pages/Admin/admin.php";
+    $adminPage = "http://localhost/TCC/Pages/Admin/admin.php";
     header("Location: ".$adminPage);
     die();
 ?>

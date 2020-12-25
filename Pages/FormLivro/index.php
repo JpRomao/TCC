@@ -1,7 +1,8 @@
 <?php
     session_start();
 
-    if(!isset($_SESSION['admin'])){
+    if(!isset($_SESSION['admin']) && $_SESSION["admin"]){
+        echo "<h1>Página movida permanentemente";
         die();
     }
 
@@ -23,7 +24,6 @@
                 <select name="materia" id="materia">
                     <option value="" selected="selected" hidden="hidden">&lt;Selecione a matéria do livro&gt;</option>
                     <option value="Artes">Artes</option>
-                    <!-- <option value="Educação Física">Educação Física</option> -->
                     <option value="Física">Física</option>
                     <option value="Química">Química</option>
                     <option value="Matemática">Matemática</option>
@@ -50,12 +50,12 @@
         <button type="submit" id="action" class="btn">Registrar</button>
     </div>
     <div id="status"></div>
-    <a href="<?php echo "https://ifbookst.herokuapp.com"; ?>">
-        <img src="<?php echo 'https://ifbookst.herokuapp.com/assets/icons/back.svg'; ?>" alt="Voltar"/>
+    <a href="http://localhost/TCC/">
+        <img src="http://localhost/TCC/assets/icons/back.svg" alt="Voltar"/>
             Voltar
     </a>
 </main>
-<script src="<?php echo 'https://ifbookst.herokuapp.com/assets/js/formBook.js'; ?>"></script>
+<script src="http://localhost/TCC/assets/js/formBook.js"></script>
 <?php
     include("../templates/footer.php");
 ?>
