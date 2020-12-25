@@ -9,15 +9,15 @@
     include_once('../../connection.php');
     include_once('../../barcode.inc.php');
 
-    // if(empty($_POST["nome"])
-    //     || empty($_POST["sobrenome"])
-    //     || empty($_POST["ano"])
-    //     || empty($_POST["prontuario"])
-    //     || empty($_POST["turma"]))
-    // {
-    //     echo "Por favor, preencha todos os dados corretamente";
-    //     die();
-    // }
+    if(empty($_POST["nome"])
+        || empty($_POST["sobrenome"])
+        || empty($_POST["ano"])
+        || empty($_POST["prontuario"])
+        || empty($_POST["turma"]))
+    {
+        echo "Por favor, preencha todos os dados corretamente";
+        die();
+    }
 
     $pasta = "";
     $nome = "a";

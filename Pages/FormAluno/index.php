@@ -61,12 +61,12 @@
         </div>
         <div id="status"></div>
     </div>
-    <a href="http://localhost/TCC/">
-        <img src="http://localhost/TCC/assets/icons/back.svg" alt="Voltar"/>
+    <a href="https://ifbookstcc.000webhostapp.com/">
+        <img src="https://ifbookstcc.000webhostapp.com/assets/icons/back.svg" alt="Voltar"/>
             Voltar
     </a>
 </main>
-<script src="http://localhost/TCC/assets/js/formStudent.js"></script>
+<script src="https://ifbookstcc.000webhostapp.com/assets/js/formStudent.js"></script>
 <?php
     include("../templates/footer.php");
 ?>

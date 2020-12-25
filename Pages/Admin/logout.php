@@ -5,6 +5,6 @@
 
   session_destroy();
 
-  header("Location: http://localhost/TCC/");
+  header("Location: https://ifbookstcc.000webhostapp.com/");
   die();
 ?>

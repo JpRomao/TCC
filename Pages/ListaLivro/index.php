@@ -101,7 +101,7 @@
         </table>
         <a
             class="btn previous-btn"
-            href="http://localhost/TCC/Pages/ListaLivro?page=<?php
+            href="https://ifbookstcc.000webhostapp.com/Pages/ListaLivro?page=<?php
                     $page--;
                     echo $page;
                 ?>"
@@ -110,7 +110,7 @@
         </a>
         <a
             class="btn next-btn"
-            href="http://localhost/TCC/Pages/ListaLivro?page=<?php
+            href="https://ifbookstcc.000webhostapp.com/Pages/ListaLivro?page=<?php
                     if(isset($_GET["page"])){
                         $page = $_GET["page"]; 
                     }
@@ -124,8 +124,8 @@
             Next
         </a>
     </div>
-    <a href="http://localhost/TCC/" class="link-btn">
-        <img src="http://localhost/TCC/assets/icons/back.svg" alt="Voltar"/>
+    <a href="https://ifbookstcc.000webhostapp.com/" class="link-btn">
+        <img src="https://ifbookstcc.000webhostapp.com/assets/icons/back.svg" alt="Voltar"/>
             Voltar
     </a>
 </main>

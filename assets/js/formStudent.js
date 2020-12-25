@@ -6,13 +6,13 @@ $(function(){
         const prontuario = `${$("input[name='prontuario']").val()}`;
         const turma = $("select[name='turma']").val();
         const continuar = `${$("input[name='continuar']").prop('checked')}`;
-console.log(continuar);
-        // if(prontuario.length !== 7){
-        //     return $("#status").html("Verifique seu prontuário.");
-        // }
+
+        if(prontuario.length !== 7){
+            return $("#status").html("Verifique seu prontuário.");
+        }
 
         $.ajax({
-           url: "http://localhost/TCC/Pages/FormAluno/studentRegister.php",
+           url: "https://ifbookstcc.000webhostapp.com/Pages/FormAluno/studentRegister.php",
            type: "post",
            data: {
                 nome,

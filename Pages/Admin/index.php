@@ -18,12 +18,12 @@
         <div class="dropdown-alunos">
             <a class="alunos">
                 Alunos
-                <img src="http://localhost/TCC/assets/icons/alunosIcon.svg" alt="Alunos ícone"/>
+                <img src="https://ifbookstcc.000webhostapp.com/assets/icons/alunosIcon.svg" alt="Alunos ícone"/>
             </a>
             <div class="dropdown-content-alunos">
                 <?php
                     if(isset($_SESSION["admin"]) && $_SESSION["admin"]){
-                        echo "<a href='http://localhost/TCC/Pages/FormAluno/'>Cadastrar Alunos</a>";
+                        echo "<a href='https://ifbookstcc.000webhostapp.com/Pages/FormAluno/'>Cadastrar Alunos</a>";
                     }
                 ?>
                 <a href="http://localhost/TCC/Pages/ListaAluno/">Listagem Alunos</a>
@@ -32,15 +32,15 @@
         <div class="dropdown-livros">
             <a class="livros">
                 Livros 
-                <img src="http://localhost/TCC/assets/icons/livrosIcon.svg" alt="Livros ícone"/>
+                <img src="https://ifbookstcc.000webhostapp.com/assets/icons/livrosIcon.svg" alt="Livros ícone"/>
             </a>
             <div class="dropdown-content-livros">
                 <?php
                     if(isset($_SESSION["admin"]) && $_SESSION["admin"]){
-                        echo "<a href='http://localhost/TCC/Pages/FormLivro'>Cadastrar Livros</a>";
+                        echo "<a href='https://ifbookstcc.000webhostapp.com/Pages/FormLivro'>Cadastrar Livros</a>";
                     }
                 ?>  
-                <a href="http://localhost/TCC/Pages/ListaLivro">Listagem Livros</a>
+                <a href="https://ifbookstcc.000webhostapp.com/Pages/ListaLivro">Listagem Livros</a>
             </div>
         </div>
     </div>
