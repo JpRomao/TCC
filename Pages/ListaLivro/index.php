@@ -1,23 +1,46 @@
 <?php
+    session_start();
+
     $array['titulo'] = "Listar Livros";
-    $array["pageCss"] = ["listBook"];
+    $array["pageCss"] = ["listBook", "table"];
+
+    $page = 1;
+
+    if(isset($_GET["page"]) && $_GET["page"] > 0){
+        $page = $_GET["page"];
+    }
+
+    $inicio = $page - 1;
+    $inicio = $inicio * $page;
 
     include("../templates/header.php");
 ?>
+
 <main id="main">
     <div class="table">
         <table>
             <thead>
                 <th>Matéria</th>
                 <th>Ano letivo</th>
-                <th>Quantidade despachada</th>
+                <!-- <th>Quantidade despachada</th> -->
                 <th>Quantidade em estoque</th>
-                <th>Quantidade Total</th>
+                <!-- <th>Quantidade Total</th> -->
+                <?php
+                    if(isset($_SESSION['admin']) && $_SESSION["admin"]){
+                        echo "<th colspan='2'>Ação</th>";   
+                    }
+                ?>
             </thead>
             <tbody>
                 <?php
                     include_once("../../connection.php");
-                    $sql = "SELECT livros.materia, livros.ano, livros.despachado, livros.estoque FROM livros";
+                    $sql = "SELECT
+                                livros.materia,
+                                livros.ano,
+                                livros.despachado,
+                                livros.estoque
+                                FROM livros LIMIT $inicio, 5;
+                            ";
 
                     foreach($pdo->query($sql) as $row){
                 ?>
@@ -32,34 +55,81 @@
                                     echo $row['ano'];   
                                 ?>
                             </td>
-                            <td>
+                            <!-- <td>
                                 <?php
-                                    echo $row['despachado']; 
+                                    // echo $row['despachado']; 
                                 ?>
-                            </td>
+                            </td> -->
                             <td>
                                 <?php
                                     echo $row['estoque']; 
                                 ?>
                             </td>
-                            <td>
+                            <!-- <td>
                                 <?php
-                                    $totalLivros = $row['estoque'] + $row['despachado'];
-                                    echo $totalLivros;
+                                    // $totalLivros = $row['estoque'] + $row['despachado'];
+                                    // echo $totalLivros;
                                 ?>
-                            </td>
+                            </td> -->
+                            <?php
+                                if(isset($_SESSION['admin']) && $_SESSION["admin"]){
+                                    echo
+                                        "<td>
+                                            <button class='btn-action'>
+                                                <img
+                                                    src='../../assets/icons/editIcon.svg'
+                                                    alt='Ícone botão de excluir'
+                                                />
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button class='btn-action'>
+                                                <img
+                                                    src='../../assets/icons/removeIcon.svg'
+                                                    alt='Ícone botão de excluir'
+                                                />
+                                            </button>
+                                        </td>
+                                    ";
+                                }
+                            ?>
                         </tr>
                 <?php
                     }
                 ?>
             </tbody>
         </table>
+        <a
+            class="btn previous-btn"
+            href="http://localhost/TCC/Pages/ListaLivro?page=<?php
+                    $page--;
+                    echo $page;
+                ?>"
+        >
+            Previous
+        </a>
+        <a
+            class="btn next-btn"
+            href="http://localhost/TCC/Pages/ListaLivro?page=<?php
+                    if(isset($_GET["page"])){
+                        $page = $_GET["page"]; 
+                    }
+                    else{
+                        $page=1;
+                    }
+                    $page++;
+                    echo $page;
+                ?>"
+        >
+            Next
+        </a>
     </div>
-    <a href="<?php echo 'http://localhost/TCC/Pages/Admin/admin.php'; ?>">
-        <img src="<?php echo 'http://localhost/TCC/assets/icons/back.svg'; ?>" alt="Voltar"/>
+    <a href="http://localhost/TCC/" class="link-btn">
+        <img src="http://localhost/TCC/assets/icons/back.svg" alt="Voltar"/>
             Voltar
     </a>
 </main>
+
 <?php
     include("../templates/footer.php");
 ?>

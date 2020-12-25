@@ -1,6 +1,7 @@
 .buttons-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 3.2rem 0;
 }
 
@@ -8,7 +9,7 @@
     width: 22rem;
     height: 8.5rem;
     border-radius: 0.7rem;
-    font: 700 3.6rem Archivo;
+    font: 700 1.6rem Archivo;
 
     display: flex;
     align-items: center;
@@ -18,7 +19,11 @@
     text-decoration: none;
     color: var(--color-button-text);
 
-    transition: background-color 0.2s;
+    transition: 0.6s;
+}
+
+.buttons-container a:first-child {
+    margin-right: 2rem;
 }
 
 .buttons-container a img {
@@ -26,48 +31,58 @@
     width: 5.4rem;
 }
 
-.buttons-container a.alunos {
+.buttons-container a {
     background: var(--color-primary);
-    font-size: 5.8rem;
+    font-size: 4.3rem;
 }
 
-.buttons-container a.alunos:hover {
+.buttons-container a:hover {
     cursor: pointer;
     background: var(--color-primary-dark);
 }
 
-.buttons-container .dropdown-content-alunos {
+.buttons-container .dropdown-content-alunos, .buttons-container .dropdown-content-livros {
     display: none;
     position: relative;
     z-index: 1;
 }
 
-.buttons-container .dropdown-content-alunos a {
-    text-decoration: none;
-    border: 1px solid black;
-    background: var(--color-secondary);
-    width: 22rem;
-    height: 8.5rem;
+.buttons-container .dropdown-content-alunos a, .buttons-container .dropdown-content-livros a {
     display: block;
+    width: 20rem;
+    height: 8.5rem;
+    border: 1px solid black;
+
+    font-size: 3.6rem;
+    text-decoration: none;
+
+    background: var(--color-secondary);
+    transition: 1s;
 }
 
-.dropdown-alunos:hover .dropdown-content-alunos {
-    margin-top: 0.5px;
+.dropdown-alunos:hover .dropdown-content-alunos, .dropdown-livros:hover .dropdown-content-livros {
+    transition: 1s;
+    margin-top: 1px;
     position: absolute;
     display: block;
   }
 
-.dropdown-alunos .dropdown-content-alunos a:hover {
+.dropdown-alunos .dropdown-content-alunos a:hover, .dropdown-livros .dropdown-content-livros a:hover {
     background: var(--color-secondary-dark);
 }
 
-.buttons-container .dropdown-content-alunos a:first-child {
-    margin-bottom: 1px;
+.buttons-container .dropdown-content-alunos a:first-child, .buttons-container .dropdown-content-livros a:first-child {
+    margin-bottom: 2px;
 }
 
 @media (min-width: 700px) {
     .buttons-container a {
-        width: 30rem;
+        width: 28rem;
         height: 10rem;
+        font-size: 3.6rem;
+    }
+
+    .buttons-container a.alunos, .buttons-container a.livros {
+        font-size: 6rem;
     }
 }

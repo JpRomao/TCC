@@ -103,6 +103,11 @@
     text-align: center;
 }
 
+#main-div .content #status ul {
+    list-style-type: none;
+    margin-bottom: 2.5rem;
+}
+
 @media (min-width: 700px) {
     #main-div .content #form {
         margin: 1.5rem 20%;

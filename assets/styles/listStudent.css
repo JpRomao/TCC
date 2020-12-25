@@ -15,13 +15,13 @@ table, th, td {
 
 td, th {
     height: 4rem;
-    width: 25%;
+    width: 18%;
     text-align: center;
 }
 
 th {
     line-height: 1.6rem;
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
 td {
@@ -29,7 +29,7 @@ td {
     font-size: 1.8rem;
 }
 
-#main-div main a {
+#main-div main a.link-btn {
     color: var(--color-title-in-primary);
     text-decoration: none;
     font-weight: bold;

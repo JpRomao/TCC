@@ -1,6 +1,11 @@
 <?php
     session_start();
 
+    if(!isset($_SESSION['admin']) && $_SESSION["admin"]){
+        echo "<h1>Página movida permanentemente</h1>";
+        die();
+    }
+
     include_once("../../connection.php");
 
     if(isset($_POST["action"])){

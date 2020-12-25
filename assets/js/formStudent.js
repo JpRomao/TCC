@@ -5,10 +5,11 @@ $(function(){
         const ano = $("select[name='ano']").val();
         const prontuario = `${$("input[name='prontuario']").val()}`;
         const turma = $("select[name='turma']").val();
-
-        if(prontuario.length !== 7){
-            return $("#status").html("Verifique seu prontuário.");
-        }
+        const continuar = `${$("input[name='continuar']").prop('checked')}`;
+console.log(continuar);
+        // if(prontuario.length !== 7){
+        //     return $("#status").html("Verifique seu prontuário.");
+        // }
 
         $.ajax({
            url: "http://localhost/TCC/Pages/FormAluno/studentRegister.php",
@@ -18,7 +19,8 @@ $(function(){
                 sobrenome,
                 ano,
                 prontuario,
-                turma
+                turma,
+                continuar
            },
            success: response => {
                if(response === 1){
