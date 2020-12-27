@@ -29,7 +29,7 @@
         }
     }
 
-    $adminPage = "http://localhost/TCC/Pages/Admin/admin.php";
+    $adminPage = "http://localhost/TCC/Pages/Admin/";
     header("Location: ".$adminPage);
     die();
 ?>

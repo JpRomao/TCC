@@ -2,10 +2,15 @@
   display: block;
   position: relative;
   margin-bottom: 9rem;
+  width: 100%;
 }
 
 td {
   padding: 0.8rem;
+}
+
+td input {
+  width: 90%;
 }
 
 .btn {
@@ -45,7 +50,7 @@ td {
   cursor: pointer;
   border: none;
   border-radius: 1rem;
-  width: 40px;
+  width: 42px;
   height: 30px;
   padding: 0.3rem;
   background-color: transparent;

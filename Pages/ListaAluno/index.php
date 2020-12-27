@@ -17,6 +17,7 @@
 ?>
 <main id="main">
     <div class="table">
+        <div id="status"></div>
         <table>
             <thead>
                 <th>Prontuário</th>
@@ -25,7 +26,7 @@
                 <th>Código</th>
                 <?php
                     if(isset($_SESSION['admin']) && $_SESSION["admin"]){
-                        echo "<th colspan='2'>Ação</th>";
+                        echo "<th>Ação</th>";
                     }
                 ?>
             </thead>
@@ -68,15 +69,13 @@
                                 if(isset($_SESSION['admin']) && $_SESSION["admin"]){
                                     echo
                                         "<td>
-                                            <button class='btn-action'>
+                                            <button class='btn-action btn-edit'>
                                                 <img
                                                     src='../../assets/icons/editIcon.svg'
-                                                    alt='Ícone botão de excluir'
+                                                    alt='Ícone botão de editar'
                                                 />
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button class='btn-action'>
+                                            </button><strong> | </strong>
+                                            <button class='btn-action btn-remove'>
                                                 <img
                                                     src='../../assets/icons/removeIcon.svg'
                                                     alt='Ícone botão de excluir'
@@ -101,11 +100,11 @@
                     }
                 ?>"
         >
-            Previous
+            Anterior
         </a>
         <a
             class="btn next-btn"
-            href="http://localhost/TCC/ListaAluno?page=<?php
+            href="http://localhost/TCC/Pages/ListaAluno?page=<?php
                     if(isset($_GET["page"])){
                         $page = $_GET["page"]; 
                     }
@@ -116,7 +115,7 @@
                     echo $page;
                 ?>"
         >
-            Next
+            Próxima
         </a>
     </div>
     <a class="link-btn" href="http://localhost/TCC/">
@@ -124,7 +123,7 @@
             Voltar
     </a>
 </main>
-
+<script src="../../assets/js/listStudent.js"></script>
 <?php
     include("../templates/footer.php");
 ?>

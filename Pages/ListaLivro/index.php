@@ -22,12 +22,14 @@
             <thead>
                 <th>Matéria</th>
                 <th>Ano letivo</th>
-                <!-- <th>Quantidade despachada</th> -->
+                <th>Quantidade despachada</th>
                 <th>Quantidade em estoque</th>
-                <!-- <th>Quantidade Total</th> -->
                 <?php
                     if(isset($_SESSION['admin']) && $_SESSION["admin"]){
-                        echo "<th colspan='2'>Ação</th>";   
+                        echo 
+                        "
+                            <th>Ação</th>
+                        ";   
                     }
                 ?>
             </thead>
@@ -55,34 +57,26 @@
                                     echo $row['ano'];   
                                 ?>
                             </td>
-                            <!-- <td>
+                            <td>
                                 <?php
-                                    // echo $row['despachado']; 
+                                    echo $row['despachado']; 
                                 ?>
-                            </td> -->
+                            </td>
                             <td>
                                 <?php
                                     echo $row['estoque']; 
                                 ?>
                             </td>
-                            <!-- <td>
-                                <?php
-                                    // $totalLivros = $row['estoque'] + $row['despachado'];
-                                    // echo $totalLivros;
-                                ?>
-                            </td> -->
                             <?php
                                 if(isset($_SESSION['admin']) && $_SESSION["admin"]){
                                     echo
                                         "<td>
-                                            <button class='btn-action'>
+                                            <button class='btn-action btn-edit'>
                                                 <img
                                                     src='../../assets/icons/editIcon.svg'
-                                                    alt='Ícone botão de excluir'
+                                                    alt='Ícone botão de editar'
                                                 />
-                                            </button>
-                                        </td>
-                                        <td>
+                                            </button><strong> | </strong>
                                             <button class='btn-action'>
                                                 <img
                                                     src='../../assets/icons/removeIcon.svg'
@@ -129,7 +123,7 @@
             Voltar
     </a>
 </main>
-
+<script src="../../assets/js/listBook.js"></script>
 <?php
     include("../templates/footer.php");
 ?>

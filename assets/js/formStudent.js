@@ -11,6 +11,10 @@ $(function(){
             return $("#status").html("Verifique seu prontuário.");
         }
 
+        if(ano != '1' && ano != '2' && ano != '3' && ano != '4'){
+            return $("#status").html("Ano inserido não corresponde a nenhum existente.");
+        }
+
         $.ajax({
            url: "http://localhost/TCC/Pages/FormAluno/studentRegister.php",
            type: "post",

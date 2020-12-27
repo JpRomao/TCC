@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if(!isset($_SESSION['admin']) && $_SESSION["admin"]){
+    if(!isset($_SESSION['admin']) && !$_SESSION["admin"]){
         echo "<h1>Página movida permanentemente</h1>";
         die();
     }
@@ -20,11 +20,11 @@
     }
 
     $pasta = "";
-    $nome = "a";
-    $sobrenome = "s";
-    $ano = "1";
-    $prontuario = "123";
-    $turma = "informática";
+    $nome = $_POST["nome"];
+    $sobrenome = $_POST["sobrenome"];
+    $ano = $_POST["ano"];
+    $prontuario = $_POST["prontuario"];
+    $turma = $_POST["turma"];
     $codigo = $prontuario.'00'.$ano;
     $livrosFaltando = [];
 
@@ -92,7 +92,9 @@
 
             $quantidadeEstoque = $sql->fetch();
 
-            if($quantidadeEstoque["estoque"]<=0){
+            if(gettype($quantidadeEstoque) == 'array'
+                && $quantidadeEstoque["estoque"]<=0)
+            {
                 array_push($livrosFaltando, $livro);
             }
         }
@@ -120,32 +122,46 @@
 
             $quantidadeEstoque = $sql->fetch();
 
-            if($quantidadeEstoque["estoque"]>0){
+            if(gettype($quantidadeEstoque) == 'array'
+                && $quantidadeEstoque["estoque"]>0)
+            {
                 $sql = $pdo->prepare("UPDATE livros SET despachado = (despachado + 1), estoque = (estoque - 1) WHERE materia = ? AND ano = ?");
                 $sql->execute($data);
             }
         }
 
         new barCodeGenerator($codigo, 1, "../../assets/img/barcodes/$pasta/$prontuario-00$ano.gif", 140, 145, true);
+        
+        if(count($livrosFaltando) > 0){
+            $livros = "";
 
-        echo
-        "
-            <img
-                src='../../assets/img/barcodes/$pasta/$prontuario-00$ano.gif'
-                alt='codigo de barra: $codigo'
-            />
-        ";
+            foreach($livrosFaltando as $livroFaltando){
+                $livros .= "$livroFaltando,";
+            }
 
-        $livros = "";
+            $aluno = [$prontuario, $nome, $ano, $codigo, $turma, $livros];
 
-        foreach($livrosFaltando as $livroFaltando){
-            $livros .= "$livroFaltando,";
+            $sql = $pdo->prepare("INSERT INTO alunos (prontuario, nome, ano, codigo, turma, livros_faltando) VALUES (?,?,?,?,?,?)");
+            $sql->execute($aluno);
         }
+        else {
+            $aluno = [$prontuario, $nome, $ano, $codigo, $turma, "Nenhum"];
 
-        $aluno = [$prontuario, $nome, $ano, $codigo, $turma, $livrosFaltando];
-
-        $sql = $pdo->prepare("INSERT INTO alunos (prontuario, nome, ano, codigo, turma, livros_faltando) VALUES (?,?,?,?,?,?)");
-        $sql->execute($aluno);
+            $sql = $pdo->prepare("INSERT INTO alunos (prontuario, nome, ano, codigo, turma, livros_faltando) VALUES (?,?,?,?,?,?)");
+            $sql->execute($aluno);
+        }
+        if($sql->rowCount() === 1){
+            echo
+            "
+                <img
+                    src='../../assets/img/barcodes/$pasta/$prontuario-00$ano.gif'
+                    alt='codigo de barra: $codigo'
+                />
+            ";
+        }
+        else{
+            echo "Aluno já inserido, verifique o prontuário";
+        }
 
         die();
     }catch(PDOException $e){
