@@ -28,5 +28,5 @@
       echo "Ocorreu um erro na exclusão do livro.";
     }
   }catch(PDOException $e){
-    echo json_encode($e->getMessage());
+    echo $e->getMessage();
   }

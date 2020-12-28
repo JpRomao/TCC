@@ -80,4 +80,25 @@ $(function(){
       }
     });
   });
+
+  $(document).on("click", ".btn-remove", function(){
+    const tdEdits = $(this).parent().parent().find("td");
+    const prontuario = tdEdits[0].innerHTML.trim();
+
+    $.ajax({
+      url: "http://localhost/TCC/Pages/ListaAluno/deleteStudent.php",
+      type: "POST",
+      data: {
+        prontuario,
+      },
+      success: function(response){
+        tdEdits.parent().remove();
+
+        return $("#status strong").html(response);
+      },
+      error: function(){
+        return $("#status strong").html("Servidor está fora do ar. Tente novamente mais tarde.");
+      }
+    });
+  });
 });
