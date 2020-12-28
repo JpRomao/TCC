@@ -150,7 +150,7 @@
             $sql = $pdo->prepare("INSERT INTO alunos (prontuario, nome, ano, codigo, turma, livros_faltando) VALUES (?,?,?,?,?,?)");
             $sql->execute($aluno);
         }
-        if($sql->rowCount() === 1){
+        if($sql->rowCount() == 1){
             echo
             "
                 <img

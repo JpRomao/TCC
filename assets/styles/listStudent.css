@@ -1,3 +1,39 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav input {
+    border: 0.5px solid black;
+    border-radius: 1rem;
+}
+
+.btn-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3.6rem;
+    height: 3.6rem;
+    margin-left: 1.2rem;
+    padding: 1rem;
+
+    border: none;
+    cursor: pointer;
+    background: #c0c269ad;
+    border-radius: 1rem;
+}
+
+#filter {
+    margin-bottom: 2rem;
+}
+
+.btn-search img {
+    width: 2.6rem;
+}
+
 .table {
     width: 100%;
 }

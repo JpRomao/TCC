@@ -17,6 +17,17 @@
 ?>
 <main id="main">
     <div class="table">
+        <!-- <div id="filter">
+            <nav>
+                <input type="text" name='search'/>
+                <button class='btn-search'>
+                    <img
+                        src="../../assets/icons/searchIcon.svg"
+                        alt="Botão de pesquisar"
+                    />
+                </button>
+            </nav>
+        </div> -->
         <div id="status">
             <strong></strong>
         </div>

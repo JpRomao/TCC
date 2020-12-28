@@ -59,7 +59,7 @@
             </div>
             <button type="submit" id="action" class="btn">Registrar</button>
         </div>
-        <div id="status"></div>
+        <div id="status"><strong></strong></div>
     </div>
     <a href="http://localhost/TCC/">
         <img src="http://localhost/TCC/assets/icons/back.svg" alt="Voltar"/>

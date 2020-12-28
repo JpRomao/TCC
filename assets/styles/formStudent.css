@@ -60,7 +60,7 @@
     font-size: 2rem;
     font-weight: bold;
     position: absolute;
-    left: 25%;
+    left: 10%;
 }
 
 #main-div .content #form .form-info .campos input, select {
@@ -70,8 +70,7 @@
     border: 2px solid var(--color-primary-dark);
     border-radius: 0.5rem;
     color: var(--color-text-in-primary);
-    min-width: 30%;
-    max-width: 297px;
+    width: 200px;
 }
 
 #main-div .content #form .btn {
@@ -117,5 +116,17 @@
     #main-div .content #form .form-info .campos .input-block {
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media (min-width: 850px) {
+    #main-div .content #form .form-info .campos label {
+        left: 17%;
+    }
+}
+
+@media (min-width: 1080px) {
+    #main-div .content #form .form-info .campos label {
+        left: 25%;
     }
 }

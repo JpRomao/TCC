@@ -28,14 +28,14 @@ $(function(){
            },
            success: response => {
                if(response === 1){
-                   return $("#status").html("Aluno cadastrado com sucesso.");
+                   return $("#status strong").html(response);
                }
                else{
                    return $("#status strong").html(response);
                }
            },
            error: () => {
-               return $("#status").html("Não foi possível conectar ao servidor.");
+               return $("#status strong").html("Não foi possível conectar ao servidor.");
            }
         });
     });

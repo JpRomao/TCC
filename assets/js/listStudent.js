@@ -94,11 +94,15 @@ $(function(){
       success: function(response){
         tdEdits.parent().remove();
 
-        return $("#status strong").html(response);
+        return $("#status strong").html(response).css("color","green");
       },
       error: function(){
-        return $("#status strong").html("Servidor está fora do ar. Tente novamente mais tarde.");
+        return $("#status strong").html("Servidor está fora do ar. Tente novamente mais tarde.").css("color","red");
       }
     });
   });
+
+  // $(document).on("click", ".btn-search", function(){
+
+  // });
 });

@@ -19,7 +19,7 @@
     $sql->execute([$prontuario]);
 
     if($sql->rowCount() === 1){
-      echo "Aluno de $prontuario excluído.";
+      echo "Aluno de prontuario: $prontuario excluído.";
     }
     else{
       echo "Ocorreu um erro na exclusão do aluno.";
