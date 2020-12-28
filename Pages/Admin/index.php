@@ -26,7 +26,7 @@
                         echo "<a href='https://ifbookstcc.000webhostapp.com/Pages/FormAluno/'>Cadastrar Alunos</a>";
                     }
                 ?>
-                <a href="http://localhost/TCC/Pages/ListaAluno/">Listagem Alunos</a>
+                <a href="https://ifbookstcc.000webhostapp.com/Pages/ListaAluno/">Listagem Alunos</a>
             </div>
         </div>
         <div class="dropdown-livros">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Dez-2020 às 16:22
+-- Tempo de geração: 28-Dez-2020 às 05:26
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.11
 
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `administradores` (
   `id` int(11) NOT NULL,
-  `login` varchar(50) COLLATE utf8_swedish_ci NOT NULL,
-  `senha` varchar(35) COLLATE utf8_swedish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+  `login` varchar(50) NOT NULL,
+  `senha` varchar(35) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `administradores`
@@ -48,29 +48,21 @@ INSERT INTO `administradores` (`id`, `login`, `senha`) VALUES
 
 CREATE TABLE `alunos` (
   `id` int(11) NOT NULL,
-  `prontuario` char(7) COLLATE utf8_swedish_ci NOT NULL,
-  `nome` varchar(80) COLLATE utf8_swedish_ci NOT NULL,
+  `prontuario` char(7) NOT NULL,
+  `nome` varchar(80) NOT NULL,
   `ano` int(1) NOT NULL,
-  `codigo` varchar(200) COLLATE utf8_swedish_ci NOT NULL,
-  `turma` set('Informática','Mecânica') COLLATE utf8_swedish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci COMMENT='Tabela dos alunos';
+  `codigo` varchar(200) NOT NULL,
+  `turma` set('Informática','Mecânica') NOT NULL,
+  `livros_faltando` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabela dos alunos';
 
 --
 -- Extraindo dados da tabela `alunos`
 --
 
-INSERT INTO `alunos` (`id`, `prontuario`, `nome`, `ano`, `codigo`, `turma`) VALUES
-(1, '12312', 'adq', 1, 'qqq', 'Informática'),
-(2, '123124', 'João Pedro Romão Romão', 1, '123124001', 'Informática'),
-(3, '1231242', 'João Pedro Romão Romão', 1, '12312421412001', 'Informática'),
-(4, '1232', 'João Pedro Romão Romão', 1, '1232001', 'Informática'),
-(5, '123123', 'João Pedro Romão Romão', 1, '123123001', 'Informática'),
-(6, '123', 'aposkdaskop apsodapsojd', 1, '123001', 'Informática'),
-(8, '12321', 'João Pedro Romão Romão', 1, '12321001', 'Informática'),
-(10, '123142', 'João Pedro Romão Romão', 1, '123142001', 'Informática'),
-(15, '231', 'João Pedro Romão Romão', 1, '231001', 'Informática'),
-(17, '1233', 'João Pedro Romão Romão', 1, '1233001', 'Informática'),
-(19, '1234567', 'João Pedro Romão Romão', 1, '1234567001', 'Informática');
+INSERT INTO `alunos` (`id`, `prontuario`, `nome`, `ano`, `codigo`, `turma`, `livros_faltando`) VALUES
+(12, '1232132', 'João Pedro Romão Romão', 1, '1232132001', 'Informática', 'Nenhum'),
+(13, '1233213', 'adas cac', 2, '1233213002', 'Informática', 'Nenhum');
 
 -- --------------------------------------------------------
 
@@ -80,11 +72,25 @@ INSERT INTO `alunos` (`id`, `prontuario`, `nome`, `ano`, `codigo`, `turma`) VALU
 
 CREATE TABLE `livros` (
   `id` int(11) NOT NULL,
-  `materia` set('Português','Matemática','Química','Biologia','Física','Inglês','Geografia','Sociologia','História','Artes','Filosofia','Espanhol') COLLATE utf8_swedish_ci NOT NULL,
-  `ano` enum('1','2','3','4') COLLATE utf8_swedish_ci NOT NULL,
+  `materia` set('Português','Matemática','Química','Biologia','Física','Inglês','Geografia','Sociologia','História','Artes','Filosofia','Espanhol') NOT NULL,
+  `ano` enum('1','2','3','4') NOT NULL,
   `despachado` int(11) NOT NULL,
   `estoque` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `livros`
+--
+
+INSERT INTO `livros` (`id`, `materia`, `ano`, `despachado`, `estoque`) VALUES
+(49, 'Artes', '1', 9, 21),
+(50, 'Física', '1', 9, 21),
+(51, 'Química', '1', 0, 30),
+(52, 'Matemática', '1', 9, 21),
+(53, 'Português', '1', 9, 21),
+(54, 'Inglês', '1', 9, 21),
+(55, 'Espanhol', '1', 0, 30),
+(56, 'Sociologia', '1', 9, 21);
 
 --
 -- Índices para tabelas despejadas
@@ -125,13 +131,13 @@ ALTER TABLE `administradores`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

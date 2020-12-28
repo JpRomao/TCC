@@ -11,6 +11,10 @@ $(function(){
             return $("#status").html("Verifique seu prontuário.");
         }
 
+        if(ano != '1' && ano != '2' && ano != '3' && ano != '4'){
+            return $("#status").html("Ano inserido não corresponde a nenhum existente.");
+        }
+
         $.ajax({
            url: "https://ifbookstcc.000webhostapp.com/Pages/FormAluno/studentRegister.php",
            type: "post",
@@ -24,14 +28,14 @@ $(function(){
            },
            success: response => {
                if(response === 1){
-                   return $("#status").html("Aluno cadastrado com sucesso.");
+                   return $("#status strong").html(response);
                }
                else{
-                   return $("#status").html(response);
+                   return $("#status strong").html(response);
                }
            },
            error: () => {
-               return $("#status").html("Não foi possível conectar ao servidor.");
+               return $("#status strong").html("Não foi possível conectar ao servidor.");
            }
         });
     });

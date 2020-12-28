@@ -59,7 +59,7 @@
             </div>
             <button type="submit" id="action" class="btn">Registrar</button>
         </div>
-        <div id="status"></div>
+        <div id="status"><strong></strong></div>
     </div>
     <a href="https://ifbookstcc.000webhostapp.com/">
         <img src="https://ifbookstcc.000webhostapp.com/assets/icons/back.svg" alt="Voltar"/>

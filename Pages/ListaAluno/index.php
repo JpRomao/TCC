@@ -17,15 +17,33 @@
 ?>
 <main id="main">
     <div class="table">
+        <!-- <div id="filter">
+            <nav>
+                <input type="text" name='search'/>
+                <button class='btn-search'>
+                    <img
+                        src="../../assets/icons/searchIcon.svg"
+                        alt="Botão de pesquisar"
+                    />
+                </button>
+            </nav>
+        </div> -->
+        <div id="status">
+            <strong></strong>
+        </div>
         <table>
             <thead>
                 <th>Prontuário</th>
-                <th>Nome</th>
+                <th class='nome-td'>Nome</th>
                 <th>Ano</th>
                 <th>Código</th>
                 <?php
                     if(isset($_SESSION['admin']) && $_SESSION["admin"]){
-                        echo "<th colspan='2'>Ação</th>";
+                        echo
+                        "
+                            <th>Livros não entregues</th>
+                            <th class='action-td'>Ação</th>
+                        ";
                     }
                 ?>
             </thead>
@@ -37,7 +55,8 @@
                                 alunos.prontuario,
                                 alunos.nome,
                                 alunos.ano,
-                                alunos.codigo
+                                alunos.codigo,
+                                alunos.livros_faltando
                                 FROM alunos LIMIT $inicio, 5;
                             ";
 
@@ -64,19 +83,22 @@
                                     echo $row['codigo'];
                                 ?>
                             </td>
+                            
                             <?php
                                 if(isset($_SESSION['admin']) && $_SESSION["admin"]){
                                     echo
-                                        "<td>
-                                            <button class='btn-action'>
+                                    "
+                                        <td>
+                                                $row[livros_faltando]
+                                        </td>
+                                        <td class='action-td'>
+                                            <button class='btn-action btn-edit'>
                                                 <img
                                                     src='../../assets/icons/editIcon.svg'
-                                                    alt='Ícone botão de excluir'
+                                                    alt='Ícone botão de editar'
                                                 />
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button class='btn-action'>
+                                            </button><strong> | </strong>
+                                            <button class='btn-action btn-remove'>
                                                 <img
                                                     src='../../assets/icons/removeIcon.svg'
                                                     alt='Ícone botão de excluir'
@@ -101,11 +123,11 @@
                     }
                 ?>"
         >
-            Previous
+            Anterior
         </a>
         <a
             class="btn next-btn"
-            href="https://ifbookstcc.000webhostapp.com/ListaAluno?page=<?php
+            href="https://ifbookstcc.000webhostapp.com/Pages/ListaAluno?page=<?php
                     if(isset($_GET["page"])){
                         $page = $_GET["page"]; 
                     }
@@ -116,7 +138,7 @@
                     echo $page;
                 ?>"
         >
-            Next
+            Próxima
         </a>
     </div>
     <a class="link-btn" href="https://ifbookstcc.000webhostapp.com/">
@@ -124,7 +146,7 @@
             Voltar
     </a>
 </main>
-
+<script src="../../assets/js/listStudent.js"></script>
 <?php
     include("../templates/footer.php");
 ?>
