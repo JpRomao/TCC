@@ -31,7 +31,7 @@ $(function(){
                    return $("#status").html("Aluno cadastrado com sucesso.");
                }
                else{
-                   return $("#status").html(response);
+                   return $("#status strong").html(response);
                }
            },
            error: () => {

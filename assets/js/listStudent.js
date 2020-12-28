@@ -1,6 +1,5 @@
 $(function(){
   let buttonsField;
-  let initialState = [];
   let prontuarioAntigo;
 
   $(document).on("click", ".btn-edit", function(){
@@ -9,10 +8,6 @@ $(function(){
     const tdButtons = $(this).parent();
     prontuarioAntigo = tdEdits[0].innerHTML.trim();
     let input = '';
-
-    for(let i=0;i<tdEdits.length;i++){
-      initialState.push(tdEdits[i].innerHTML.trim());
-    }
 
     buttonsField = $(tdButtons).html();
 
@@ -35,7 +30,11 @@ $(function(){
 
     if(ano != '1' && ano != '2' && ano != '3' && ano != '4'){
       console.log(ano)
-      return $("#status").html("Ano inserido não corresponde a nenhum existente.").css("color","red");
+      return $("#status strong").html("Você inseriu o ano errado.").css("color","red");
+    }
+
+    if(prontuario.length != 7){
+      return $("#status strong").html("Verifique o prontuário.").css("color","red");
     }
 
     $.ajax({
@@ -53,28 +52,31 @@ $(function(){
 
         if(response.message=="Dados atualizados com sucesso!"){
           response.dados.map((dado,index) => {
+            console.log(dado);
             if(index<4){
               $(tdEdits[index]).html(dado);
             }
           });
-          return $("#status").html(response.message).css("color","green");
+          return $("#status strong").html(response.message).css("color","green");
         }
         else {
-          for(let i=0;i<tdEdits.length;i++){
-            tdEdits[i].innerHTML = `${initialState[i]}`;
-          }
+          response.dados.map((dado,index) => {
+            if(index<4){
+              $(tdEdits[index]).html(dado);
+            }
+          });
 
-          return $("#status").html(response).css("color","red");
+          return $("#status strong").html(response.message).css("color","red");
         }
       },
-      error: function(response){
-        for(let i=0;i<tdEdits.length;i++){
-          tdEdits[i].innerHTML = `${initialState[i]}`;
-        }
-
+      error: function(){
         $(tdButtons).html(buttonsField);
 
-        return $("#status").html(response);
+        return (
+          $("#status strong")
+            .html(`Erro no servidor. Tente novamente mais tarde.`)
+            .css("color","red")
+        );
       }
     });
   });

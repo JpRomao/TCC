@@ -18,6 +18,9 @@
 
 <main id="main">
     <div class="table">
+        <div id="status">
+            <strong></strong>
+        </div>
         <table>
             <thead>
                 <th>Matéria</th>
@@ -76,8 +79,9 @@
                                                     src='../../assets/icons/editIcon.svg'
                                                     alt='Ícone botão de editar'
                                                 />
-                                            </button><strong> | </strong>
-                                            <button class='btn-action'>
+                                            </button>
+                                                <strong>|</strong>
+                                            <button class='btn-action btn-remove'>
                                                 <img
                                                     src='../../assets/icons/removeIcon.svg'
                                                     alt='Ícone botão de excluir'

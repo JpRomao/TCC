@@ -16,28 +16,24 @@
   $ano = $_POST["ano"];
   $codigo = $prontuario.'00'.$ano;
 
-  $data = [$prontuario, $nome, $ano, $codigo, $prontuarioAntigo];
+  $aluno = [$prontuario, $nome, $ano, $codigo, $prontuarioAntigo];
 
   try{
     $sql = $pdo->prepare("UPDATE alunos SET prontuario = ?, nome = ?, ano = ?, codigo = ? WHERE prontuario = ?");
-    $sql->execute($data);
+    $sql->execute($aluno);
     
+    $data = ["dados"=>$aluno];
 
     if($sql->rowCount() === 1){
-      $data = [
-        "message"=>"Dados atualizados com sucesso!",
-        "dados"=>$data
-      ];
+      $data["message"] = "Dados atualizados com sucesso!";
 
       echo json_encode($data);
     }
     else {
-      $data = [
-        "message"=>"Prontuário já existente."
-      ];
-      
+      $data["message"] = "Prontuário já existente.";
+
       echo json_encode($data);
     }
   }catch(PDOException $e){
-    echo $e->getMessage();
+    echo json_encode($e->getMessage());
   }

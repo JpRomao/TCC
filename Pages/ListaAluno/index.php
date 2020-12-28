@@ -17,16 +17,22 @@
 ?>
 <main id="main">
     <div class="table">
-        <div id="status"></div>
+        <div id="status">
+            <strong></strong>
+        </div>
         <table>
             <thead>
                 <th>Prontuário</th>
-                <th>Nome</th>
+                <th class='nome-td'>Nome</th>
                 <th>Ano</th>
                 <th>Código</th>
                 <?php
                     if(isset($_SESSION['admin']) && $_SESSION["admin"]){
-                        echo "<th>Ação</th>";
+                        echo
+                        "
+                            <th>Livros não entregues</th>
+                            <th class='action-td'>Ação</th>
+                        ";
                     }
                 ?>
             </thead>
@@ -38,7 +44,8 @@
                                 alunos.prontuario,
                                 alunos.nome,
                                 alunos.ano,
-                                alunos.codigo
+                                alunos.codigo,
+                                alunos.livros_faltando
                                 FROM alunos LIMIT $inicio, 5;
                             ";
 
@@ -65,10 +72,15 @@
                                     echo $row['codigo'];
                                 ?>
                             </td>
+                            
                             <?php
                                 if(isset($_SESSION['admin']) && $_SESSION["admin"]){
                                     echo
-                                        "<td>
+                                    "
+                                        <td>
+                                                $row[livros_faltando]
+                                        </td>
+                                        <td class='action-td'>
                                             <button class='btn-action btn-edit'>
                                                 <img
                                                     src='../../assets/icons/editIcon.svg'
