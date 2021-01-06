@@ -25,6 +25,6 @@
         }
     }
 
-    header("Location: https://ifbookst.herokuapp.com/");
+    header("Location: https://ifbookst.herokuapp.com/Pages/Admin/");
     die();
 ?>
