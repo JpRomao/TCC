@@ -8,13 +8,13 @@
             <?php echo $array['titulo']; ?>
         </title>
 
-        <link type="text/css" rel="stylesheet" href="http://ifbookstcc.atwebpages.com/assets/styles/global.css"/>
-        <link type="text/css" rel="stylesheet" href="http://ifbookstcc.atwebpages.com/assets/styles/logo.css"/>
+        <link type="text/css" rel="stylesheet" href="https://ifbookst.herokuapp.com/assets/styles/global.css"/>
+        <link type="text/css" rel="stylesheet" href="https://ifbookst.herokuapp.com/assets/styles/logo.css"/>
         <?php
             if(isset($array['pageCss'])){
                 foreach($array['pageCss'] as $index => $value){
                     ?>
-                    <link type="text/css" rel="stylesheet" href="http://ifbookstcc.atwebpages.com/assets/styles/<?php echo $value.'.css' ?>"/> 
+                    <link type="text/css" rel="stylesheet" href="https://ifbookst.herokuapp.com/assets/styles/<?php echo $value.'.css' ?>"/> 
         <?php
                 } //fim foreach
             } //fim if
@@ -30,8 +30,8 @@
             <div id='main-div-content' class='container'>
                 <header id="header">
                     <div class="logo-container">
-                        <a href="http://ifbookstcc.atwebpages.com/">
-                            <img src="http://ifbookstcc.atwebpages.com/assets/img/logo.svg" alt="Logo IF Books"/>
+                        <a href="https://ifbookst.herokuapp.com/">
+                            <img src="https://ifbookst.herokuapp.com/assets/img/logo.svg" alt="Logo IF Books"/>
                         </a>
 
                         <?php

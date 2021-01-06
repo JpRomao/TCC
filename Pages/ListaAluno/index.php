@@ -116,7 +116,7 @@
         </table>
         <a
             class="btn previous-btn"
-            href="http://ifbookstcc.atwebpages.com/Pages/ListaAluno<?php
+            href="https://ifbookst.herokuapp.com/Pages/ListaAluno<?php
                     if($page>1){
                         $page--;
                         echo "?page=$page";
@@ -127,7 +127,7 @@
         </a>
         <a
             class="btn next-btn"
-            href="http://ifbookstcc.atwebpages.com/Pages/ListaAluno?page=<?php
+            href="https://ifbookst.herokuapp.com/Pages/ListaAluno?page=<?php
                     if(isset($_GET["page"])){
                         $page = $_GET["page"]; 
                     }
@@ -141,8 +141,8 @@
             Próxima
         </a>
     </div>
-    <a class="link-btn" href="http://ifbookstcc.atwebpages.com/">
-        <img src="http://ifbookstcc.atwebpages.com/assets/icons/back.svg" alt="Voltar"/>
+    <a class="link-btn" href="https://ifbookst.herokuapp.com/">
+        <img src="https://ifbookst.herokuapp.com/assets/icons/back.svg" alt="Voltar"/>
             Voltar
     </a>
 </main>

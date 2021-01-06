@@ -61,12 +61,12 @@
         </div>
         <div id="status"><strong></strong></div>
     </div>
-    <a href="http://ifbookstcc.atwebpages.com/">
-        <img src="http://ifbookstcc.atwebpages.com/assets/icons/back.svg" alt="Voltar"/>
+    <a href="https://ifbookst.herokuapp.com/">
+        <img src="https://ifbookst.herokuapp.com/assets/icons/back.svg" alt="Voltar"/>
             Voltar
     </a>
 </main>
-<script src="http://ifbookstcc.atwebpages.com/assets/js/formStudent.js"></script>
+<script src="https://ifbookst.herokuapp.com/assets/js/formStudent.js"></script>
 <?php
     include("../templates/footer.php");
 ?>

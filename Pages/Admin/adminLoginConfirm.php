@@ -29,7 +29,7 @@
         }
     }
 
-    $adminPage = "http://ifbookstcc.atwebpages.com/";
+    $adminPage = "https://ifbookst.herokuapp.com/";
     header("Location: ".$adminPage);
     die();
 ?>
