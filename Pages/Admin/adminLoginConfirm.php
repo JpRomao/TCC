@@ -28,6 +28,6 @@
         }
     }
 
-    header("Location: https://ifbookst.herokuapp.com/");
     die();
+    header("Location: https://ifbookst.herokuapp.com/");
 ?>
