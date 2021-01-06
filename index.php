@@ -1,6 +1,13 @@
 <?php
     session_start();
 
+    if(isset($_SESSION['admin'])){
+        var_dump($_SESSION);
+        echo "<br/>";
+        echo "<br/>";
+        echo "<br/>";
+    }
+
     $array['titulo'] = "Home";
     $array['pageCss'] = ["home", "menu"];
     $array['html'] = "<h2>Entrega e Devolução de Livros</h2>";
