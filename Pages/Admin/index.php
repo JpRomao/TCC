@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if(!isset($_SESSION['admin']) && $_SESSION["admin"]){
+    if(!isset($_SESSION['admin'])){
         echo "<h1>Página movida permanentemente</h1>";
         die();
     }
