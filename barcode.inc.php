@@ -1,8 +1,4 @@
 <?php 
-/**
-  @author: Raj Trivedi (India), 2009-10-14 
-  @modify: Taylor Lopes (Brazil), 2012-04-06
-*/
 class barCodeGenerator {
 private $file;
 private $into;

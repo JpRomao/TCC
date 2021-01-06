@@ -29,7 +29,7 @@
         }
     }
 
-    $adminPage = "http://localhost/TCC/Pages/Admin/";
+    $adminPage = "http://ifbookstcc.atwebpages.com/";
     header("Location: ".$adminPage);
     die();
 ?>

@@ -50,12 +50,12 @@
         <button type="submit" id="action" class="btn">Registrar</button>
     </div>
     <div id="status"></div>
-    <a href="http://localhost/TCC/">
-        <img src="http://localhost/TCC/assets/icons/back.svg" alt="Voltar"/>
+    <a href="http://ifbookstcc.atwebpages.com/">
+        <img src="http://ifbookstcc.atwebpages.com/assets/icons/back.svg" alt="Voltar"/>
             Voltar
     </a>
 </main>
-<script src="http://localhost/TCC/assets/js/formBook.js"></script>
+<script src="http://ifbookstcc.atwebpages.com/assets/js/formBook.js"></script>
 <?php
     include("../templates/footer.php");
 ?>

@@ -38,7 +38,7 @@ $(function(){
     }
 
     $.ajax({
-      url: "http://localhost/TCC/Pages/ListaAluno/updateStudent.php",
+      url: "http://ifbookstcc.atwebpages.com/Pages/ListaAluno/updateStudent.php",
       type: "POST",
       data: {
         prontuario,
@@ -86,7 +86,7 @@ $(function(){
     const prontuario = tdEdits[0].innerHTML.trim();
 
     $.ajax({
-      url: "http://localhost/TCC/Pages/ListaAluno/deleteStudent.php",
+      url: "http://ifbookstcc.atwebpages.com/Pages/ListaAluno/deleteStudent.php",
       type: "POST",
       data: {
         prontuario,

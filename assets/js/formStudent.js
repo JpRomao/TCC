@@ -16,7 +16,7 @@ $(function(){
         }
 
         $.ajax({
-           url: "http://localhost/TCC/Pages/FormAluno/studentRegister.php",
+           url: "http://ifbookstcc.atwebpages.com/Pages/FormAluno/studentRegister.php",
            type: "post",
            data: {
                 nome,
