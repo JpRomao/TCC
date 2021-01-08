@@ -29,18 +29,20 @@
         if($i>0){
             $data = [$quantidade, $materia, $ano];
 
-            $sql = $pdo->prepare("UPDATE livros SET estoque = (estoque - ?) WHERE materia = ? AND ano = ?");
+            $sql = $pdo->prepare("UPDATE livros SET estoque = (estoque + ?) WHERE materia = ? AND ano = ?");
             $sql->execute($data);
+
+            echo 1;
         }
         else{
             $sql = $pdo->prepare("INSERT INTO livros (materia, ano, estoque) VALUES (?,?,?)");
             $sql->execute($livro);
 
-            echo json_encode(1);
+            echo 1;
             die();
         }
     }catch(PDOException $e){
-        echo "Livro já inserido.";
+        echo "Erro ao inserir livro.";
         die();
     }
 ?>

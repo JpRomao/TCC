@@ -165,7 +165,7 @@
 
         die();
     }catch(PDOException $e){
-        echo $e->getMessage();
+        echo "catch";
         die();
     }
 ?>

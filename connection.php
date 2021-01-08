@@ -3,7 +3,7 @@
 
     try{
         $pdo = new PDO("mysql:host=".DATABASE['HOST'].";port=".DATABASE['PORT'].";dbname=".DATABASE['DB'],DATABASE['USER'],DATABASE['PASSWORD']);
-    }catch(Exception $e){
+    }catch(PDOException $e){
         echo $e->getMessage();
     }
 ?>

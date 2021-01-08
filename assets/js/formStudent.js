@@ -34,7 +34,8 @@ $(function(){
                    return $("#status strong").html(response);
                }
            },
-           error: () => {
+           error: (response) => {
+               console.log(response);
                return $("#status strong").html("Não foi possível conectar ao servidor.");
            }
         });
