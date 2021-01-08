@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Dez-2020 às 05:26
+-- Tempo de geração: 08-Jan-2021 às 18:10
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.11
 
@@ -62,7 +62,9 @@ CREATE TABLE `alunos` (
 
 INSERT INTO `alunos` (`id`, `prontuario`, `nome`, `ano`, `codigo`, `turma`, `livros_faltando`) VALUES
 (12, '1232132', 'João Pedro Romão Romão', 1, '1232132001', 'Informática', 'Nenhum'),
-(13, '1233213', 'adas cac', 2, '1233213002', 'Informática', 'Nenhum');
+(13, '1233213', 'adas cac', 2, '1233213002', 'Informática', 'Nenhum'),
+(14, '1234566', 'cxa vcv', 1, '1234566001', 'Informática', 'Artes,'),
+(15, '1790221', 'cvx zxc', 1, '1790221001', 'Informática', 'Artes,');
 
 -- --------------------------------------------------------
 
@@ -83,14 +85,16 @@ CREATE TABLE `livros` (
 --
 
 INSERT INTO `livros` (`id`, `materia`, `ano`, `despachado`, `estoque`) VALUES
-(49, 'Artes', '1', 9, 21),
-(50, 'Física', '1', 9, 21),
+(49, 'Artes', '1', 9, 0),
+(50, 'Física', '1', 12, 18),
 (51, 'Química', '1', 0, 30),
-(52, 'Matemática', '1', 9, 21),
-(53, 'Português', '1', 9, 21),
-(54, 'Inglês', '1', 9, 21),
+(52, 'Matemática', '1', 12, 18),
+(53, 'Português', '1', 12, 18),
+(54, 'Inglês', '1', 12, 18),
 (55, 'Espanhol', '1', 0, 30),
-(56, 'Sociologia', '1', 9, 21);
+(56, 'Sociologia', '1', 12, 18),
+(57, 'Artes', '2', 0, 30),
+(58, 'Artes', '3', 0, 33);
 
 --
 -- Índices para tabelas despejadas
@@ -131,13 +135,13 @@ ALTER TABLE `administradores`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
