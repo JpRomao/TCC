@@ -16,7 +16,7 @@ $(function(){
         }
 
         $.ajax({
-           url: "http://ifbookstcc.atwebpages.com/Pages/FormAluno/studentRegister.php",
+           url: "https://ifbookst.herokuapp.com/Pages/FormAluno/studentRegister.php",
            type: "post",
            data: {
                 nome,

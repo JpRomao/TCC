@@ -5,7 +5,7 @@ $(function(){
       const quantidade = $("input[name='quantidade']").val();
 
       $.ajax({
-         url: "http://ifbookstcc.atwebpages.com/Pages/FormLivro/bookRegister.php",
+         url: "https://ifbookst.herokuapp.com/Pages/FormLivro/bookRegister.php",
          type: "post",
          data: {
               materia,

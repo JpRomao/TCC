@@ -62,7 +62,7 @@ $(function(){
     }
 
     $.ajax({
-      url: "http://ifbookstcc.atwebpages.com/Pages/ListaLivro/updateBook.php",
+      url: "https://ifbookst.herokuapp.com/Pages/ListaLivro/updateBook.php",
       type: "POST",
       data: {
         materia,
@@ -113,7 +113,7 @@ $(function(){
     const ano = tdEdits[1].innerHTML.trim();
 
     $.ajax({
-      url: "http://ifbookstcc.atwebpages.com/Pages/ListaLivro/deleteBook.php",
+      url: "https://ifbookst.herokuapp.com/Pages/ListaLivro/deleteBook.php",
       type: "POST",
       data: {
         materia,
